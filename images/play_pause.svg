@@ -1,0 +1,26 @@
+<svg width="48" height="24" viewBox="0 0 48 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>play_pause</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-386 -157)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 386 157L 434 157L 434 181L 386 181L 386 157Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="play_pause" clip-path="url(#clip-0)">
+<g id="Polygon 3">
+<use xlink:href="#path0_fill" transform="translate(417 163)" fill="#FFFFFF" fill-opacity="0.35"/>
+</g>
+<g id="Group">
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="translate(393 164)" fill="#FFFFFF" fill-opacity="0.35"/>
+</g>
+<g id="Rectangle">
+<use xlink:href="#path1_fill" transform="translate(398.833 164)" fill="#FFFFFF" fill-opacity="0.35"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 10.5 6L 0 12L 0 0L 10.5 6Z"/>
+<path id="path1_fill" d="M 0 0L 4.16667 0L 4.16667 10L 0 10L 0 0Z"/>
+</defs>
+</svg>

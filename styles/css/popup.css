@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  font-display: fallback;
+  font-family: 'Muli', Verdana, sans-serif;
+  color: rgba(255, 255, 255, 0.95); }
+
+.messageBox {
+  position: relative;
+  background: lightblue;
+  box-shadow: 0 3px 8px 3px rgba(0, 0, 0, 0.1);
+  background-color: #30739c;
+  width: 100%;
+  max-width: 680px;
+  padding: 35px 60px 70px 50px; }
+  .messageBox a {
+    color: #ffda95;
+    text-decoration: none;
+    font-weight: 700; }
+
+.closeModal {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: url(../../images/cross-large-dark.svg) 50%/100% no-repeat;
+  cursor: pointer;
+  right: -34px;
+  top: -33px;
+  opacity: 0.5; }
+
+.mainTitle {
+  font-size: 30px;
+  line-height: 1.1em;
+  margin-bottom: 25px;
+  font-weight: 300; }
+  .mainTitle span {
+    font-weight: 700; }
+
+.bannerText {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.25em; }
+
+.controls {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse; }
+  .controls .tickBox {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse; }
+    .controls .tickBox:before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: 0px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      background-color: rgba(255, 255, 255, 0.2); }
+    .controls .tickBox p {
+      margin: 0 32px 0 0;
+      font-size: 13px;
+      user-select: none;
+      color: rgba(255, 255, 255, 0.7);
+      letter-spacing: 0.03em; }
+    .controls .tickBox.clicked p {
+      color: rgba(255, 255, 255, 0.9); }
+      .controls .tickBox.clicked p:before {
+        content: '';
+        width: 14px;
+        height: 3px;
+        background: white;
+        position: absolute;
+        right: 2px;
+        border-radius: 1px;
+        transform: rotate(305deg);
+        top: 6px; }
+      .controls .tickBox.clicked p:after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 9px;
+        background: white;
+        right: 11px;
+        transform: rotate(37deg);
+        top: 10px; }
+
+/*# sourceMappingURL=popup.css.map */

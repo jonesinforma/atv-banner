@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Muli';
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../../fonts/muli/muli-light.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Muli';
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../../fonts/muli/muli-regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Muli';
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../../fonts/muli/muli-semibold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Muli';
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../../fonts/muli/muli-bold.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Muli';
+  font-weight: 800;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../../fonts/muli/muli-black.ttf") format("truetype"); }
+
+/*# sourceMappingURL=fonts.css.map */
