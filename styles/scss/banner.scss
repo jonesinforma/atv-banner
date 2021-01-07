@@ -778,7 +778,7 @@ span {
             .mobile-banner-spacer {
                 flex: 1 1 40%;
                 width: 100%;
-                background: green;
+                // background: green;
             }
 
             .surOrSubTitle {
@@ -853,6 +853,14 @@ span {
         &.atvWelcome {
             .bannerRight .titlesAndButtons {
                 padding: 10px 10px 150px 10px;
+            }
+        }
+    }
+
+    .logged-in {
+        .announcementBanner.leftRight {
+            .bannerLeft {
+                width: 100%;
             }
         }
     }

@@ -493,8 +493,7 @@ span.smallSpace {
       justify-content: center; }
     .announcementBanner.leftRight .mobile-banner-spacer {
       flex: 1 1 40%;
-      width: 100%;
-      background: green; }
+      width: 100%; }
     .announcementBanner.leftRight .surOrSubTitle {
       flex: 1 1 34%; }
     .announcementBanner .mainTitle {
@@ -536,6 +535,9 @@ span.smallSpace {
       padding: 5px 14px 6px; }
     .announcementBanner.atvWelcome .bannerRight .titlesAndButtons {
       padding: 10px 10px 150px 10px; }
+
+  .logged-in .announcementBanner.leftRight .bannerLeft {
+    width: 100%; }
 
   .continueBtn {
     display: inline-block; }
