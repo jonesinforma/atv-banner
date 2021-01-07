@@ -441,6 +441,44 @@ span {
         }
     }
 
+    &.leftRight {
+
+        &.mobileUi2 {
+
+            .bannerLeft {
+                width: calc(50% - 194px);
+                background: #eceff4;
+            }
+
+            .bannerRight {
+                background: #5978e2;
+                margin-top: -62px;
+
+                &:before {
+                    border-right-color: #5978e2;
+                }
+
+                .titlesAndButtons {
+                    padding: 30px 30px;
+                }
+            }
+
+            .bannerImage {
+                position: absolute;
+                width: 100%;
+                right: -69px;
+                top: 0;
+                height: 100%;
+                background-image: url(../../images/iPhone-banner-black2.jpg);
+                background-size: 560px;
+                background-position: top right;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+
+
+
     .bannerLeft {
         position: relative;
         font-size: 0;
@@ -458,6 +496,10 @@ span {
         position: absolute;
         right: 0;
         top: 0;
+
+        img {
+            height: 100%;
+        }
     }
 
     .bannerRight {
@@ -481,7 +523,7 @@ span {
             left: 0;
             z-index: 1;
             margin-left: -36px;
-            margin-top: -23px;
+            margin-top: -62px;
         }
     }
 
@@ -523,7 +565,34 @@ span {
 .announcementBanner.leftRight {
 
     .bannerLeft {
-        width: calc(50% - 256px);
+        width: calc(50% - 191px);
+        background: #edf0f5;
+    }
+
+    .bannerImage {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 0px;
+        height: 100%;
+        background-image: url(../../images/iPhones-white-multi-1.jpg);
+        background-size: 610px;
+        background-repeat: no-repeat;
+        background-position-x: 67%;
+        background-position-y: 29%;
+        padding-right: 0;
+    }
+
+    .bannerRight {
+        background: #5d79d5;
+
+        &:before {
+            border-right-color: #5d79d5;
+        }
+
+        .titlesAndButtons {
+            padding: 30px 30px 40px;
+        }
     }
 
     .titlesAndButtons {
@@ -540,7 +609,7 @@ span {
     }
 
     .mainTitle {
-        font-size: 24px;
+        font-size: 26px;
         padding: 0;
         line-height: 1.2em;
 
@@ -555,8 +624,8 @@ span {
     }
 
     .surOrSubTitle {
-        font-size: 70%;
-        font-weight: 400;
+        font-size: 85%;
+        font-weight: 300;
         position: relative;
 
         &.small .button-text {
@@ -590,52 +659,12 @@ span {
             }
         }
     }
-
-    &.dandc {
-        color: rgba(255, 255, 255, 0.85);
-
-        a {
-            &.text-link {
-                font-weight: 700;
-                color: #ff9c1a;
-                border-bottom: 1px dashed #c67e1f;
-            }
-
-            &:hover {
-                color: #ede7d9;
-            }
-        }
-
-        .bannerRight {
-            background: #8f2965;
-
-            &:before {
-                border-right-color: #8f2965;
-            }
-        }
-
-        .titles {
-            max-width: 710px;
-        }
-
-        .surOrSubTitle {
-            font-size: 75%;
-
-            &.small {
-                font-size: 65%;
-            }
-        }
-    }
 }
 
-
-
-@media screen and (max-width: 1024px) {
-    .announcementBanner {
-        &.augReality .bannerImage img {
-            width: 100%;
-            height: auto;
-            margin-top: -30px;
+.logged-in {
+    .announcementBanner.leftRight {
+        .bannerLeft {
+            width: calc(50% - 255px);
         }
     }
 }
@@ -706,85 +735,54 @@ span {
 
         &.leftRight {
 
+            // LEFT 
+            .bannerLeft,
+            .mobile-banner-spacer {
+                height: 40%;
+            }
+
+            .bannerLeft {
+                width: 100%;
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                transform: translate(-50%, -60%);
+                left: 50%;
+            }
+
+            .bannerImage {
+                position: relative;
+                display: block;
+                padding-right: 0;
+            }
+
+
+
+            // RIGHT 
             .bannerRight {
                 border: none;
-            }
-
-            .bannerLeft {
-                width: 100%;
-                position: absolute;
-                height: 130px;
-                z-index: 1;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                left: 50%;
-            }
-
-            .bannerImage {
-                position: relative;
-                display: block;
-                padding-right: 0;
-                left: 6px;
-            }
-
-            .bannerLeft {
-                width: 100%;
-                position: absolute;
-                height: 130px;
-                z-index: 1;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                left: 50%;
-            }
-
-            &.dandc {
-                .bannerRight {
-                    justify-content: flex-start;
-
-                    .titlesAndButtons {
-                        height: calc(50% - (130px / 2));
-                        padding: 5% 20px;
-                    }
-
-                    .titles {
-                        justify-content: space-evenly;
-                    }
-                }
-            }
-
-            .bannerImage {
-                position: relative;
-                display: block;
-                padding-right: 0;
-                left: 6px;
-            }
-        }
-
-        &.launchingQuiz .titles {
-            max-width: 520px;
-        }
-
-        &.dandc {
-            .bannerRight {
-                justify-content: flex-start;
+                height: 100%;
 
                 .titlesAndButtons {
-                    height: calc(50% - (130px / 2));
-                    padding: 5% 20px;
-                }
-
-                .titles {
-                    justify-content: space-evenly;
+                    padding: 0 24px;
                 }
             }
-        }
 
-        .bannerRight {
+            .mainTitle {
+                flex: 1 1 26%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
 
-            height: 100%;
+            .mobile-banner-spacer {
+                flex: 1 1 40%;
+                width: 100%;
+                background: green;
+            }
 
-            .titlesAndButtons {
-                padding: 5px 24px 18%;
+            .surOrSubTitle {
+                flex: 1 1 34%;
             }
         }
 
@@ -793,10 +791,16 @@ span {
         }
 
         .surOrSubTitle {
+            flex: 1 1 34%;
+            display: flex;
+            flex-direction: column;
             top: 0;
             line-height: 1.25em;
-            font-size: 68%;
-            font-size: 75%;
+
+            >div {
+                position: relative;
+                top: 20%;
+            }
 
             &.spaced>* {
                 margin-bottom: 1.2em;
@@ -819,17 +823,6 @@ span {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
-                }
-            }
-
-            &.helpImprovements {
-                .surOrSubTitle.small {
-                    line-height: 1.4em;
-
-                    &.inlineImage {
-                        line-height: 0.7em;
-                        margin-bottom: 40px;
-                    }
                 }
             }
 
@@ -929,19 +922,17 @@ span {
     }
 }
 
-@media screen and (min-height: 131px){
+@media screen and (min-height: 131px) {
     .announcementBanner {
         height: 100%;
 
-        .bannerRight .titlesAndButtons {
-
-        }
+        .bannerRight .titlesAndButtons {}
     }
 
     .continueBtn {
         font-size: 16px;
         font-weight: 600;
-        bottom: 22%;
+        bottom: 13%;
         height: 36px;
         display: flex;
         align-items: center;

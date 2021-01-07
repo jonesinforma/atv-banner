@@ -290,6 +290,26 @@ span.smallSpace {
     color: #0c6941; }
   .announcementBanner.embeddedReality .bannerImage {
     border-left: 1px solid white; }
+  .announcementBanner.leftRight.mobileUi2 .bannerLeft {
+    width: calc(50% - 194px);
+    background: #eceff4; }
+  .announcementBanner.leftRight.mobileUi2 .bannerRight {
+    background: #5978e2;
+    margin-top: -62px; }
+    .announcementBanner.leftRight.mobileUi2 .bannerRight:before {
+      border-right-color: #5978e2; }
+    .announcementBanner.leftRight.mobileUi2 .bannerRight .titlesAndButtons {
+      padding: 30px 30px; }
+  .announcementBanner.leftRight.mobileUi2 .bannerImage {
+    position: absolute;
+    width: 100%;
+    right: -69px;
+    top: 0;
+    height: 100%;
+    background-image: url(../../images/iPhone-banner-black2.jpg);
+    background-size: 560px;
+    background-position: top right;
+    background-repeat: no-repeat; }
   .announcementBanner .bannerLeft {
     position: relative;
     font-size: 0;
@@ -305,6 +325,8 @@ span.smallSpace {
     position: absolute;
     right: 0;
     top: 0; }
+    .announcementBanner .bannerImage img {
+      height: 100%; }
   .announcementBanner .bannerRight {
     flex: 1 0 auto;
     display: flex;
@@ -325,7 +347,7 @@ span.smallSpace {
       left: 0;
       z-index: 1;
       margin-left: -36px;
-      margin-top: -23px; }
+      margin-top: -62px; }
   .announcementBanner .titlesAndButtons {
     display: flex;
     flex-direction: column;
@@ -350,7 +372,26 @@ span.smallSpace {
     padding: 0px 0 2px; }
 
 .announcementBanner.leftRight .bannerLeft {
-  width: calc(50% - 256px); }
+  width: calc(50% - 191px);
+  background: #edf0f5; }
+.announcementBanner.leftRight .bannerImage {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 0px;
+  height: 100%;
+  background-image: url(../../images/iPhones-white-multi-1.jpg);
+  background-size: 610px;
+  background-repeat: no-repeat;
+  background-position-x: 67%;
+  background-position-y: 29%;
+  padding-right: 0; }
+.announcementBanner.leftRight .bannerRight {
+  background: #5d79d5; }
+  .announcementBanner.leftRight .bannerRight:before {
+    border-right-color: #5d79d5; }
+  .announcementBanner.leftRight .bannerRight .titlesAndButtons {
+    padding: 30px 30px 40px; }
 .announcementBanner.leftRight .titlesAndButtons {
   height: 100%;
   padding: 18px 30px 16px;
@@ -361,7 +402,7 @@ span.smallSpace {
   flex-direction: column;
   justify-content: space-between; }
 .announcementBanner.leftRight .mainTitle {
-  font-size: 24px;
+  font-size: 26px;
   padding: 0;
   line-height: 1.2em; }
   .announcementBanner.leftRight .mainTitle + .surOrSubTitle {
@@ -370,8 +411,8 @@ span.smallSpace {
     font-size: 99%;
     font-weight: 700; }
 .announcementBanner.leftRight .surOrSubTitle {
-  font-size: 70%;
-  font-weight: 400;
+  font-size: 85%;
+  font-weight: 300;
   position: relative; }
   .announcementBanner.leftRight .surOrSubTitle.small .button-text {
     display: inline-block;
@@ -387,30 +428,10 @@ span.smallSpace {
       padding: 4px 0 6px 3px; }
     .announcementBanner.leftRight .surOrSubTitle.small .button-text a {
       font-weight: 600; }
-.announcementBanner.leftRight.dandc {
-  color: rgba(255, 255, 255, 0.85); }
-  .announcementBanner.leftRight.dandc a.text-link {
-    font-weight: 700;
-    color: #ff9c1a;
-    border-bottom: 1px dashed #c67e1f; }
-  .announcementBanner.leftRight.dandc a:hover {
-    color: #ede7d9; }
-  .announcementBanner.leftRight.dandc .bannerRight {
-    background: #8f2965; }
-    .announcementBanner.leftRight.dandc .bannerRight:before {
-      border-right-color: #8f2965; }
-  .announcementBanner.leftRight.dandc .titles {
-    max-width: 710px; }
-  .announcementBanner.leftRight.dandc .surOrSubTitle {
-    font-size: 75%; }
-    .announcementBanner.leftRight.dandc .surOrSubTitle.small {
-      font-size: 65%; }
 
-@media screen and (max-width: 1024px) {
-  .announcementBanner.augReality .bannerImage img {
-    width: 100%;
-    height: auto;
-    margin-top: -30px; } }
+.logged-in .announcementBanner.leftRight .bannerLeft {
+  width: calc(50% - 255px); }
+
 @media screen and (max-width: 1023px) {
   .announcementBanner .bannerImage {
     display: none; }
@@ -446,61 +467,47 @@ span.smallSpace {
   .announcementBanner {
     height: 100%;
     width: 100vw; }
+    .announcementBanner.leftRight .bannerLeft,
+    .announcementBanner.leftRight .mobile-banner-spacer {
+      height: 40%; }
+    .announcementBanner.leftRight .bannerLeft {
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      transform: translate(-50%, -60%);
+      left: 50%; }
+    .announcementBanner.leftRight .bannerImage {
+      position: relative;
+      display: block;
+      padding-right: 0; }
     .announcementBanner.leftRight .bannerRight {
-      border: none; }
-    .announcementBanner.leftRight .bannerLeft {
-      width: 100%;
-      position: absolute;
-      height: 130px;
-      z-index: 1;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      left: 50%; }
-    .announcementBanner.leftRight .bannerImage {
-      position: relative;
-      display: block;
-      padding-right: 0;
-      left: 6px; }
-    .announcementBanner.leftRight .bannerLeft {
-      width: 100%;
-      position: absolute;
-      height: 130px;
-      z-index: 1;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      left: 50%; }
-    .announcementBanner.leftRight.dandc .bannerRight {
-      justify-content: flex-start; }
-      .announcementBanner.leftRight.dandc .bannerRight .titlesAndButtons {
-        height: calc(50% - (130px / 2));
-        padding: 5% 20px; }
-      .announcementBanner.leftRight.dandc .bannerRight .titles {
-        justify-content: space-evenly; }
-    .announcementBanner.leftRight .bannerImage {
-      position: relative;
-      display: block;
-      padding-right: 0;
-      left: 6px; }
-    .announcementBanner.launchingQuiz .titles {
-      max-width: 520px; }
-    .announcementBanner.dandc .bannerRight {
-      justify-content: flex-start; }
-      .announcementBanner.dandc .bannerRight .titlesAndButtons {
-        height: calc(50% - (130px / 2));
-        padding: 5% 20px; }
-      .announcementBanner.dandc .bannerRight .titles {
-        justify-content: space-evenly; }
-    .announcementBanner .bannerRight {
+      border: none;
       height: 100%; }
-      .announcementBanner .bannerRight .titlesAndButtons {
-        padding: 5px 24px 18%; }
+      .announcementBanner.leftRight .bannerRight .titlesAndButtons {
+        padding: 0 24px; }
+    .announcementBanner.leftRight .mainTitle {
+      flex: 1 1 26%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+    .announcementBanner.leftRight .mobile-banner-spacer {
+      flex: 1 1 40%;
+      width: 100%;
+      background: green; }
+    .announcementBanner.leftRight .surOrSubTitle {
+      flex: 1 1 34%; }
     .announcementBanner .mainTitle {
       font-size: 95%; }
     .announcementBanner .surOrSubTitle {
+      flex: 1 1 34%;
+      display: flex;
+      flex-direction: column;
       top: 0;
-      line-height: 1.25em;
-      font-size: 68%;
-      font-size: 75%; }
+      line-height: 1.25em; }
+      .announcementBanner .surOrSubTitle > div {
+        position: relative;
+        top: 20%; }
       .announcementBanner .surOrSubTitle.spaced > * {
         margin-bottom: 1.2em;
         line-height: 1.2em; }
@@ -514,11 +521,6 @@ span.smallSpace {
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
-    .announcementBanner .noImage.helpImprovements .surOrSubTitle.small {
-      line-height: 1.4em; }
-      .announcementBanner .noImage.helpImprovements .surOrSubTitle.small.inlineImage {
-        line-height: 0.7em;
-        margin-bottom: 40px; }
     .announcementBanner .noImage .surOrSubTitle.small {
       margin-bottom: 20px; }
       .announcementBanner .noImage .surOrSubTitle.small:nth-child(2) {
@@ -588,7 +590,7 @@ span.smallSpace {
   .continueBtn {
     font-size: 16px;
     font-weight: 600;
-    bottom: 22%;
+    bottom: 13%;
     height: 36px;
     display: flex;
     align-items: center; } }
