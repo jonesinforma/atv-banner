@@ -609,5 +609,8 @@ span.smallSpace {
 
   .announcementBanner .bannerRight:before {
     margin-top: 23px; } }
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 192dpi) {
+  .announcementBanner .bannerRight:before {
+    margin-top: -37px; } }
 
 /*# sourceMappingURL=banner.css.map */

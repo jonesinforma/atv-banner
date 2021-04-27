@@ -11,21 +11,27 @@ body {
   padding: 40px;
   background: rgba(255, 255, 255, 0.95);
   font-display: fallback;
-  font-family: 'Muli', Verdana, sans-serif;
-  color: rgba(255, 255, 255, 0.95); }
+  font-family: 'Mulish', Verdana, sans-serif;
+  color: white; }
 
 .messageBox {
   position: relative;
-  background: lightblue;
   box-shadow: 0 3px 8px 3px rgba(0, 0, 0, 0.1);
-  background-color: #30739c;
+  background-color: #006e7a;
   width: 100%;
   max-width: 680px;
-  padding: 35px 60px 70px 50px; }
+  padding: 55px 60px 70px 50px; }
   .messageBox a {
-    color: #ffda95;
+    color: #ffcc99;
     text-decoration: none;
-    font-weight: 700; }
+    border-bottom: 1px dashed #d5a97e;
+    padding-bottom: 2px;
+    letter-spacing: 0.02em; }
+
+.messageBox .specialLink span {
+  color: #ffc994;
+  font-weight: 800;
+  letter-spacing: 0.06em; }
 
 .closeModal {
   position: absolute;
@@ -38,12 +44,16 @@ body {
   opacity: 0.5; }
 
 .mainTitle {
-  font-size: 30px;
-  line-height: 1.1em;
-  margin-bottom: 25px;
-  font-weight: 300; }
+  font-size: 25px;
+  line-height: 1.25em;
+  margin-bottom: 30px;
+  font-weight: 300;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff63;
+  padding-bottom: 35px; }
   .mainTitle span {
-    font-weight: 700; }
+    font-weight: 700;
+    color: #ffc994; }
 
 .bannerText {
   font-size: 17px;
@@ -89,7 +99,7 @@ body {
         right: 2px;
         border-radius: 1px;
         transform: rotate(305deg);
-        top: 6px; }
+        top: 7px; }
       .controls .tickBox.clicked p:after {
         content: '';
         position: absolute;
@@ -98,6 +108,35 @@ body {
         background: white;
         right: 11px;
         transform: rotate(37deg);
-        top: 10px; }
+        top: 11px; }
+
+@media screen and (max-width: 680px) {
+  body.popup {
+    padding: 20px 10px; }
+
+  .popup[body] {
+    padding: 20px 10px; }
+  .popup .messageBox {
+    padding: 55px 35px 70px 34px; }
+  .popup .mainTitle {
+    font-size: 22px; }
+  .popup .bannerText {
+    font-size: 16px; }
+  .popup .closeModal {
+    right: 4px;
+    top: 4px;
+    background-image: none; }
+    .popup .closeModal:before, .popup .closeModal:after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      height: 30px;
+      background: white;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      left: 50%;
+      top: 50%;
+      border-radius: 2px; }
+    .popup .closeModal:after {
+      transform: translate(-50%, -50%) rotate(45deg); } }
 
 /*# sourceMappingURL=popup.css.map */

@@ -969,3 +969,11 @@ span {
         margin-top: 23px;
     }
 }
+
+/// RETINA SCREENS IPAD PORTRAIT WIDTH OR GREATER
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+(min-width: 768px) and (min-resolution: 192dpi) {
+    .announcementBanner .bannerRight:before {
+        margin-top: -37px;
+    }
+}

@@ -2,7 +2,7 @@
 /* global $, console, f, g */
 
 var bannerShown = true,
-	popupShown = false;
+	popupShown = true;
 
 var $surveyBanner, $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody;
 var bannerHeight = 130,
@@ -13,7 +13,8 @@ var bannerHeight = 130,
 	finishAfter = 6,
 	animRunning = false,
 	animComplete = true,
-	titlesBannerAdded = false;
+	titlesBannerAdded = false,
+	isHttps = false;
 
 // var links = {
 // 	'rtLatin': 'https://primalpictures.com/freetrial.aspx?utm_source=ATV%20Banner&utm_campaign=RT%20Latin',
@@ -32,17 +33,23 @@ $(document).ready(function () {
 	$parentBody = window.parent.$("body");
 	$popupIframe = $parentBody.find('.popup-iframe');
 
+	var referrer = document.referrer;
+	console.log(referrer);
+	if (referrer.indexOf('https') > -1) {
+		isHttps = true;
+	}
+
 	if (!bannerShown) {
 		$parentBody.addClass('noBanner');
 	}
 
 	if (popupShown) {
-		if (!$.cookie('hidePopup')) {
-			// console.log('SHOW');
+		if (!$.cookie('hidePopup-http') && !isHttps) {
+			console.log('SHOW');
 			showPopup();
 		} else {
 			console.log("DON'T SHOW");
-			// console.log($.cookie('hidePopup'));
+			console.log($.cookie('hidePopup'));
 		}
 	}
 
@@ -270,12 +277,12 @@ var setOrDeletePopupCookie = function (elem) {
 	var $this = $(elem);
 	$this.toggleClass('clicked');
 	if ($this.hasClass('clicked')) {
-		$.cookie('hidePopup', 'true', {
-			expires: 3650
+		$.cookie('hidePopup-http', 'true', {
+			expires: 365
 		});
 		console.log('ADD-COOKIE');
 	} else {
-		$.removeCookie('hidePopup');
+		$.removeCookie('hidePopup-http');
 		console.log('REMOVE-COOKIE');
 	}
 	console.log($.cookie());
