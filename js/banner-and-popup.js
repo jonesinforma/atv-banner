@@ -2,9 +2,11 @@
 /* global $, console, f, g */
 
 var bannerShown = true,
-	popupShown = true;
+	popupShown = false;
+// NOTE: increment banner and popup versions in html <head>
 
 var $surveyBanner, $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody;
+
 var bannerHeight = 130,
 	slideIndex = 0,
 	slideSpeed = 1200,
@@ -44,7 +46,7 @@ $(document).ready(function () {
 	}
 
 	if (popupShown) {
-		if (!$.cookie('hidePopup-http') && !isHttps) {
+		if (!$.cookie('hidePopup' + popupEdition) && !isHttps) {
 			console.log('SHOW');
 			showPopup();
 		} else {
@@ -277,12 +279,12 @@ var setOrDeletePopupCookie = function (elem) {
 	var $this = $(elem);
 	$this.toggleClass('clicked');
 	if ($this.hasClass('clicked')) {
-		$.cookie('hidePopup-http', 'true', {
+		$.cookie('hidePopup' + popupEdition, 'true', {
 			expires: 365
 		});
 		console.log('ADD-COOKIE');
 	} else {
-		$.removeCookie('hidePopup-http');
+		$.removeCookie('hidePopup' + popupEdition);
 		console.log('REMOVE-COOKIE');
 	}
 	console.log($.cookie());
