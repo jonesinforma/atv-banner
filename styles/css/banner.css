@@ -339,7 +339,7 @@ span.smallSpace {
       left: 0;
       z-index: 1;
       margin-left: -36px;
-      margin-top: -62px; }
+      margin-top: -58px; }
   .announcementBanner .titlesAndButtons {
     display: flex;
     flex-direction: column;
@@ -372,19 +372,19 @@ span.smallSpace {
   right: 0;
   top: 0px;
   height: 100%;
-  background-image: url(../../images/maintenance8.jpg);
-  background-size: 600px;
+  background-image: url(../../images/maintenance3.jpg);
+  background-size: 708px;
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: 50%; }
 .announcementBanner.leftRight .bannerRight {
-  background: #a0156f; }
+  background: #009447; }
   .announcementBanner.leftRight .bannerRight:before {
-    border-right-color: #a0156f; }
+    border-right-color: #009447; }
 .announcementBanner.leftRight .titlesAndButtons {
   height: 100%;
   text-align: left;
-  padding: 18px 24px; }
+  padding: 28px 28px 48px; }
 .announcementBanner.leftRight .titles {
   height: 100%;
   display: flex;
@@ -394,7 +394,7 @@ span.smallSpace {
   font-size: 62.5%; }
 .announcementBanner.leftRight .mainTitle {
   padding: 0;
-  font-size: 2em;
+  font-size: 2.3em;
   line-height: 1.1em;
   letter-spacing: -0.01em; }
   .announcementBanner.leftRight .mainTitle span.standOut {
@@ -402,7 +402,7 @@ span.smallSpace {
     font-weight: 700; }
 .announcementBanner.leftRight .surOrSubTitle {
   position: relative;
-  font-size: 1.4em;
+  font-size: 1.55em;
   line-height: 1.3em;
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -427,18 +427,13 @@ span.smallSpace {
 
 @media screen and (max-width: 1220px) {
   .announcementBanner.leftRight .titles {
-    max-width: 710px; }
-  .announcementBanner.leftRight .mainTitle {
-    font-size: 1.78em; } }
+    max-width: 710px; } }
 @media screen and (max-width: 1024px) {
   .announcementBanner.leftRight .bannerImage {
-    background-size: 490px;
-    background-position-y: 50%; } }
+    background-size: 608px; } }
 @media screen and (max-width: 1023px) {
   .announcementBanner.leftRight .titles {
     max-width: 800px; }
-  .announcementBanner.leftRight .mainTitle {
-    font-size: 2em; }
   .announcementBanner.leftRight .bannerImage {
     display: none; }
   .announcementBanner.leftRight .bannerRight {
@@ -458,8 +453,6 @@ span.smallSpace {
 @media screen and (max-width: 900px) {
   .announcementBanner.leftRight .titles {
     max-width: 720px; }
-  .announcementBanner.leftRight .mainTitle {
-    font-size: 1.8em; }
 
   .playPause {
     right: unset;
@@ -490,7 +483,8 @@ span.smallSpace {
     .announcementBanner.leftRight .bannerImage {
       position: relative;
       display: block;
-      padding-right: 0; }
+      padding-right: 0;
+      background-position-x: 50%; }
     .announcementBanner.leftRight .bannerRight {
       border: none;
       height: 100%; }
