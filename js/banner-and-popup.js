@@ -1,7 +1,7 @@
 /* jshint browser: true, devel: true */
 /* global $, console, f, g */
 
-var bannerShown = true,
+var bannerShown = false,
 	popupShown = false;
 // NOTE: increment banner and popup versions in html <head>
 
