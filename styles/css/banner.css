@@ -311,7 +311,8 @@ span.smallSpace {
     width: calc(50% - 190px);
     height: 100%;
     align-items: center;
-    background: #f2f2f2; }
+    background: #f2f2f2;
+    width: 0; }
   .announcementBanner .bannerImage {
     padding-right: 20px;
     position: absolute;
@@ -322,13 +323,14 @@ span.smallSpace {
   .announcementBanner .bannerRight {
     flex: 1 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: calc(100% - 1px);
     flex-direction: column;
-    justify-content: center;
     position: relative;
     width: calc(50% + 255px);
     border-width: 0 0 1px 0;
-    border-color: rgba(255, 255, 255, 0.4);
+    background: #e6eaf2;
     border-style: solid; }
     .announcementBanner .bannerRight:before {
       content: "";
@@ -346,7 +348,7 @@ span.smallSpace {
     position: relative;
     box-sizing: border-box;
     height: 100%;
-    padding: 10px 40px 5px 40px;
+    padding: 10px 40px 33% 40px;
     justify-content: center; }
     .announcementBanner .titlesAndButtons .titles {
       background: none; }
@@ -356,7 +358,7 @@ span.smallSpace {
     .announcementBanner .titles strong {
       font-weight: 700; }
   .announcementBanner .mainTitle {
-    line-height: 1.3em;
+    line-height: 3em;
     padding: 2px 0; }
   .announcementBanner .surOrSubTitle {
     font-size: 85%;
@@ -378,7 +380,8 @@ span.smallSpace {
   background-position-x: 100%;
   background-position-y: 50%; }
 .announcementBanner.leftRight .bannerRight {
-  background: #009447; }
+  background: #009447;
+  align-items: flex-start; }
   .announcementBanner.leftRight .bannerRight:before {
     border-right-color: #009447; }
 .announcementBanner.leftRight .titlesAndButtons {
@@ -470,6 +473,8 @@ span.smallSpace {
     width: 100vw; }
     .announcementBanner .mobile-banner-spacer {
       width: 100%; }
+    .announcementBanner .bannerRight {
+      background: #6f5fa1; }
     .announcementBanner.leftRight .bannerLeft,
     .announcementBanner.leftRight .mobile-banner-spacer {
       height: 120px; }
@@ -500,7 +505,7 @@ span.smallSpace {
     .announcementBanner.leftRight .surOrSubTitle {
       flex: 1 1 34%; }
     .announcementBanner .mainTitle {
-      font-size: 95%; }
+      font-size: 26px; }
     .announcementBanner .surOrSubTitle {
       height: calc(48% - 113px);
       display: flex;
@@ -591,7 +596,7 @@ span.smallSpace {
   .continueBtn {
     font-size: 16px;
     font-weight: 600;
-    bottom: 13%;
+    bottom: 33%;
     height: 36px;
     display: flex;
     align-items: center; } }

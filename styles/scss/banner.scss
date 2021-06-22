@@ -480,6 +480,7 @@ span {
     height: 100%;
     align-items: center;
     background: #f2f2f2;
+    width: 0;
   }
 
   .bannerImage {
@@ -496,13 +497,15 @@ span {
   .bannerRight {
     flex: 1 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: calc(100% - 1px);
     flex-direction: column;
-    justify-content: center;
     position: relative;
     width: calc(50% + 255px);
     border-width: 0 0 1px 0;
-    border-color: hsla(0, 0%, 100%, 0.4);
+    background: #e6eaf2;
+    // border-color: #6f5fa1;
     border-style: solid;
 
     &:before {
@@ -524,7 +527,7 @@ span {
     position: relative;
     box-sizing: border-box;
     height: 100%;
-    padding: 10px 40px 5px 40px;
+    padding: 10px 40px 33% 40px;
     justify-content: center;
 
     .titles {
@@ -542,7 +545,7 @@ span {
   }
 
   .mainTitle {
-    line-height: 1.3em;
+    line-height: 3em;
     padding: 2px 0;
   }
 
@@ -574,6 +577,7 @@ span {
 
   .bannerRight {
     background: #009447;
+    align-items: flex-start;
 
     &:before {
       border-right-color: #009447;
@@ -749,6 +753,10 @@ span {
       width: 100%;
     }
 
+    .bannerRight {
+      background: #6f5fa1;
+    }
+
     &.leftRight {
       // LEFT
       .bannerLeft,
@@ -799,7 +807,7 @@ span {
     }
 
     .mainTitle {
-      font-size: 95%;
+      font-size: 26px;
     }
 
     .surOrSubTitle {
@@ -946,7 +954,7 @@ span {
   .continueBtn {
     font-size: 16px;
     font-weight: 600;
-    bottom: 13%;
+    bottom: 33%;
     height: 36px;
     display: flex;
     align-items: center;
