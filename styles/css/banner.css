@@ -432,30 +432,6 @@ span.smallSpace {
 .logged-in .announcementBanner.leftRight .bannerLeft {
   width: calc(50% - 255px); }
 
-@media screen and (max-width: 1023px) {
-  .announcementBanner .bannerImage {
-    display: none; }
-  .announcementBanner .bannerRight {
-    width: 100vw; }
-    .announcementBanner .bannerRight .titlesAndButtons {
-      width: 100%;
-      text-align: center;
-      align-items: center; }
-  .announcementBanner .titles {
-    align-items: center; }
-  .announcementBanner .bannerLeft {
-    width: 0; }
-  .announcementBanner.atvWelcome .bannerRight .titlesAndButtons {
-    padding: 10px 10px 5px 10px; }
-  .announcementBanner.atvWelcome .mainTitle {
-    font-size: 23px; } }
-@media screen and (max-width: 900px) {
-  .announcementBanner.surveyImprove .surOrSubTitle.small {
-    font-size: 75%; }
-
-  .playPause {
-    right: unset;
-    left: 0; } }
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .shyBreak {
     display: block; }

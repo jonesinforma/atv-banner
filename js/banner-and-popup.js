@@ -1,10 +1,11 @@
 /* jshint browser: true, devel: true */
 /* global $, console, f, g */
 
-var bannerShown = true,
-	popupShown = false;
+var bannerExists = true,
+	popupExists = false,
+	bannerEdition = 3;
 
-var $surveyBanner, $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody;
+var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
 	slideIndex = 0,
 	slideSpeed = 1200,
@@ -13,7 +14,8 @@ var bannerHeight = 130,
 	finishAfter = 6,
 	animRunning = false,
 	animComplete = true,
-	titlesBannerAdded = false;
+	titlesBannerAdded = false,
+	docReady = false;
 
 // var links = {
 // 	'rtLatin': 'https://primalpictures.com/freetrial.aspx?utm_source=ATV%20Banner&utm_campaign=RT%20Latin',
@@ -27,36 +29,86 @@ var bannerHeight = 130,
 
 $(document).ready(function () {
 
-	// console.log('DR - banner-and-popup.js');
+	if (!docReady) {
+		console.log('DR - PL banner-and-popup.js');
 
-	$parentBody = window.parent.$("body");
-	$popupIframe = $parentBody.find('.popup-iframe');
+		$parentBody = window.parent.$("body");
+		$parentBanner = window.parent.$(".bannerBox");
+		$bannerContents = $('.banner');
 
-	if (!bannerShown) {
-		$parentBody.addClass('noBanner');
-	}
+		$popupIframe = $parentBody.find('.popup-iframe');
 
-	if (popupShown) {
-		if (!$.cookie('hidePopup')) {
-			// console.log('SHOW');
-			showPopup();
+		if (bannerExists) {
+			if ($.cookie("bannerHidden" + bannerEdition)) {
+				console.log('Banner exists and is hidden');
+
+				$parentBanner.queue(function () {
+					$parentBanner.css('transition', 'all 0s')
+						.removeClass('initial')
+						.removeClass('shown')
+						.addClass('hidden');
+					$parentBanner.dequeue();
+				});
+				$parentBanner.css('transition', 'all 0.8s');
+
+				$bannerContents.queue(function () {
+					$bannerContents
+						.css('transition', 'all 0s')
+						.removeClass('shown')
+						.addClass('hidden');
+					$bannerContents.dequeue();
+				});
+				$bannerContents.css('transition', 'all 0.8s');
+			} else {
+				setTimeout(function () {
+					$parentBanner.removeClass('initial')
+				}, 2000);
+			}
+
 		} else {
-			console.log("DON'T SHOW");
-			// console.log($.cookie('hidePopup'));
+			$parentBody.addClass('noBanner');
 		}
+
+
+
+		if (popupExists) {
+			if (!$.cookie('hidePopup')) {
+				// console.log('SHOW');
+				showPopup();
+			} else {
+				console.log("DON'T SHOW");
+				// console.log($.cookie('hidePopup'));
+			}
+		}
+
+		// checkForCookiesRelatingToButtons();
+
+		// addOnClickToCookieButtons();
+
+		initialiseIframeRotatingBanner();
+		setIframeBodyClassAccordingToLoginStatus()
 	}
 
-	// checkForCookiesRelatingToButtons();
-
-	// addOnClickToCookieButtons();
-
-	initialiseIframeRotatingBanner();
-	setIframeBodyClassAccordingToLoginStatus()
+	docReady = true;
 });
 
+function showHideBanner(elem) {
+	var $elem = $(elem);
+	$elem.closest('.banner').toggleClass('hidden');
+	var $bannerBox = window.parent.$("#bannerBox");
+	if ($bannerBox.hasClass('shown')) {
+		$bannerBox.removeClass('shown').addClass('hidden');
+	} else {
+		$bannerBox.removeClass('hidden').addClass('shown');
+	}
 
-function setBodyClassForItem() {
-	// console.log('OLD --- setBodyClassAccordingToLoginStatus');
+	if ($elem.hasClass('gotIt-button')) {
+		if ($bannerBox.hasClass('shown')) {
+			$.removeCookie("bannerHidden" + bannerEdition);
+		} else {
+			$.cookie("bannerHidden" + bannerEdition, "true");
+		}
+	}
 }
 
 function setIframeBodyClassAccordingToLoginStatus() {

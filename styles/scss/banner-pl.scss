@@ -1,0 +1,495 @@
+@font-face {
+    font-family: 'Muli';
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/muli/muli-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/muli/muli-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/muli/muli-semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/muli/muli-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Muli';
+    font-weight: 800;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/muli/muli-black.ttf') format('truetype');
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: lightcoral;
+    font-family: 'Muli', Verdana, sans-serif;
+}
+
+span {
+    &.avoidwrap {
+        display: inline-block;
+    }
+
+    &.semibold {
+        font-weight: 700;
+    }
+
+    &.bold {
+        font-weight: 800;
+    }
+
+    &.smallSpace {
+        letter-spacing: -0.1em;
+    }
+}
+
+.showHide {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: calc(0% + 6px);
+    bottom: 8px;
+    border-radius: 50%;
+    background: #bdc8db url(../../images/cross-dark.svg) 50%/80% no-repeat;
+    cursor: pointer;
+    border: none;
+    transition: all 0.8s;
+    transform: translate(0, 3px);
+
+    p {
+        display: none;
+    }
+}
+
+.hidden {
+    .showHide {
+        width: 35px;
+        height: 36px;
+        right: calc(50% - 0px);
+        bottom: 0px;
+        border-radius: 0;
+        background: url(../../images/announcement.svg) 50% -4px/38px no-repeat;
+        cursor: pointer;
+        transform: translate(50%, 0px);
+        width: 76px;
+        height: 32px;
+    }
+
+    .announcementBanner {
+        background: #cdd5e4;
+
+        .bannerImage {
+            opacity: 0;
+        }
+    }
+}
+
+.announcementBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: left;
+    background: #edf0f5;
+    font-weight: 300;
+    padding: 0;
+    height: 100%;
+    position: relative;
+    font-size: 21px;
+    overflow: hidden;
+    transition: background-color 0.8s;
+
+    a {
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .bannerImage {
+        background: url(../../images/iPhones-white-multi-1.jpg) 50% -17px/68% no-repeat;
+        width: 100%;
+        height: 240px;
+        opacity: 1;
+        transition: opacity 0.5s;
+        transition-delay: 0.1s;
+    }
+
+    .titlesAndButtons {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+
+    .titles {
+        box-sizing: border-box;
+        line-height: 1.15em;
+        text-align: center;
+        font-weight: 600;
+        color: #3f3c4f;
+        margin-bottom: 12px;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    .mainTitle {
+        line-height: 1.3em;
+        padding: 2px 0;
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+
+    .surOrSubTitle {
+        font-size: 80%;
+        line-height: 1.15em;
+        padding: 0px 0 2px;
+    }
+}
+
+.gotIt-button {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    height: 32px;
+    width: 92px;
+    border-radius: 16px;
+    border: none;
+    background: #bdc7db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    font-family: 'Muli';
+    font-weight: 700;
+    color: #14121a;
+}
+
+.displayIsNone {
+    display: none !important;
+}
+
+.dotContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 2px 0;
+    box-sizing: border-box;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 20px;
+    z-index: 100;
+
+    .dot {
+        width: 14px;
+        height: 14px;
+        background: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-sizing: border-box;
+        cursor: pointer;
+        font-size: 0px;
+        color: white;
+
+        &.active {
+            background: rgba(255, 255, 255, 0.3);
+            border-width: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.playPause {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 300;
+    top: 50%;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%);
+    margin-left: 2vw;
+    cursor: pointer;
+    background-image: url(../../images/play-pause-light.svg);
+    right: 50px;
+    margin-top: 1px;
+    background-position-x: -30px;
+
+    &.paused {
+        background-position-x: 0;
+    }
+}
+
+.continueBtn {
+    display: none;
+    bottom: 18%;
+    position: absolute;
+    color: #726a7c;
+    background: white;
+    height: 50px;
+    padding: 0px 18px;
+    border-radius: 25px;
+    left: 50vw;
+    font-size: 16px;
+    font-weight: 600;
+    transform: translate(-50%, 50%);
+    z-index: 10;
+}
+
+.logged-out .for-TitlesPage {
+    display: none !important;
+}
+
+.logged-in {
+    .for-LoginPage {
+        display: none !important;
+
+        .button-text {
+            margin-bottom: 6px;
+            padding: 5px 14px 6px;
+        }
+    }
+
+    .announcementBanner span.button-text {
+        border-bottom: 2px dotted rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+    }
+}
+
+.logged-out,
+.logged-in {
+    .for-Mobile {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    .shyBreak {
+        display: block;
+    }
+
+    .bannerInnerBox {
+        width: 100vw;
+        display: flex;
+    }
+
+    .announcementBanner {
+        height: 100%;
+        width: 100vw;
+
+        &.leftRight {
+            // LEFT
+            .bannerLeft,
+            .mobile-banner-spacer {
+                height: 40%;
+            }
+
+            .bannerLeft {
+                width: 100%;
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                transform: translate(-50%, -60%);
+                left: 50%;
+            }
+
+            .bannerImage {
+                position: relative;
+                display: block;
+                padding-right: 0;
+            }
+
+            // RIGHT
+            .bannerRight {
+                border: none;
+                height: 100%;
+
+                .titlesAndButtons {
+                    padding: 0 24px;
+                }
+            }
+
+            .mainTitle {
+                flex: 1 1 26%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .mobile-banner-spacer {
+                flex: 1 1 40%;
+                width: 100%;
+                // background: green;
+            }
+
+            .surOrSubTitle {
+                flex: 1 1 34%;
+            }
+        }
+
+        .mainTitle {
+            font-size: 95%;
+        }
+
+        .surOrSubTitle {
+            flex: 1 1 34%;
+            display: flex;
+            flex-direction: column;
+            top: 0;
+            line-height: 1.25em;
+
+            > div {
+                position: relative;
+                top: 20%;
+            }
+
+            &.spaced > * {
+                margin-bottom: 1.2em;
+                line-height: 1.2em;
+            }
+        }
+
+        .bannerButton div {
+            font-size: 13px;
+            min-width: 110px;
+            padding: 9px 12px;
+            margin-top: 8px;
+        }
+
+        .noImage {
+            &.titlesAndButtons {
+                .titles {
+                    background: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                }
+            }
+
+            .surOrSubTitle.small {
+                margin-bottom: 20px;
+
+                &:nth-child(2) {
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .button-text {
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .shyBreak {
+            display: block;
+        }
+
+        #logged-in-text.button-text {
+            margin-bottom: 6px;
+            padding: 5px 14px 6px;
+        }
+
+        &.atvWelcome {
+            .bannerRight .titlesAndButtons {
+                padding: 10px 10px 150px 10px;
+            }
+        }
+    }
+
+    .logged-in {
+        .announcementBanner.leftRight {
+            .bannerLeft {
+                width: 100%;
+            }
+        }
+    }
+
+    .continueBtn {
+        display: inline-block;
+
+        p {
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+    }
+
+    .dotContainer {
+        bottom: 70px;
+        flex-direction: row;
+        height: 40px;
+        width: 350px;
+        left: 50vw;
+        transform: translateX(-50%);
+
+        .dot.active {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    .playPause {
+        right: unset;
+        bottom: 75px;
+        top: unset;
+        left: 50vw;
+        transform: translateX(-50%);
+        margin: 0 0 0 1px;
+    }
+
+    .logged-out {
+        .for-Mobile {
+            display: inline !important;
+        }
+    }
+
+    .logged-out,
+    .logged-in {
+        .for-Desktop {
+            display: none !important;
+        }
+    }
+
+    span.keepOnOneLine {
+        display: block;
+    }
+
+    .messageBox {
+        padding: 25px 30px 60px 30px;
+    }
+
+    .mainTitle {
+        font-size: 26px;
+    }
+
+    .bannerText {
+        font-size: 15px;
+    }
+}

@@ -3,7 +3,7 @@
     font-weight: 300;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-light.ttf") format("truetype");
+    src: url('../../fonts/muli/muli-light.ttf') format('truetype');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-weight: 400;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-regular.ttf") format("truetype");
+    src: url('../../fonts/muli/muli-regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-weight: 600;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-semibold.ttf") format("truetype");
+    src: url('../../fonts/muli/muli-semibold.ttf') format('truetype');
 }
 
 @font-face {
@@ -27,7 +27,7 @@
     font-weight: 700;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-bold.ttf") format("truetype");
+    src: url('../../fonts/muli/muli-bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -35,7 +35,7 @@
     font-weight: 800;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-black.ttf") format("truetype");
+    src: url('../../fonts/muli/muli-black.ttf') format('truetype');
 }
 
 body {
@@ -161,7 +161,6 @@ span {
     z-index: 10;
 }
 
-
 .logged-out .for-TitlesPage {
     display: none !important;
 }
@@ -264,7 +263,7 @@ span {
     &.welcome {
         &.noImage {
             .bannerRight {
-                background: #3469a2
+                background: #3469a2;
             }
 
             .titlesAndButtons {
@@ -442,9 +441,7 @@ span {
     }
 
     &.leftRight {
-
         &.mobileUi2 {
-
             .bannerLeft {
                 width: calc(50% - 194px);
                 background: #eceff4;
@@ -476,8 +473,6 @@ span {
             }
         }
     }
-
-
 
     .bannerLeft {
         position: relative;
@@ -563,7 +558,6 @@ span {
 }
 
 .announcementBanner.leftRight {
-
     .bannerLeft {
         width: calc(50% - 191px);
         background: #edf0f5;
@@ -613,7 +607,7 @@ span {
         padding: 0;
         line-height: 1.2em;
 
-        +.surOrSubTitle {
+        + .surOrSubTitle {
             top: -5px;
         }
 
@@ -669,57 +663,7 @@ span {
     }
 }
 
-@media screen and(max-width: 1023px) {
-    .announcementBanner {
-        .bannerImage {
-            display: none;
-        }
-
-        .bannerRight {
-            width: 100vw;
-
-            .titlesAndButtons {
-                width: 100%;
-                text-align: center;
-                align-items: center;
-            }
-        }
-
-        .titles {
-            align-items: center;
-        }
-
-        .bannerLeft {
-            width: 0;
-        }
-
-
-        &.atvWelcome {
-            .bannerRight .titlesAndButtons {
-                padding: 10px 10px 5px 10px;
-            }
-
-            .mainTitle {
-                font-size: 23px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .announcementBanner.surveyImprove .surOrSubTitle.small {
-        font-size: 75%;
-    }
-
-    .playPause {
-        right: unset;
-        left: 0;
-    }
-}
-
-
 @media screen and (max-width: 767px) and (orientation: portrait) {
-
     .shyBreak {
         display: block;
     }
@@ -734,8 +678,7 @@ span {
         width: 100vw;
 
         &.leftRight {
-
-            // LEFT 
+            // LEFT
             .bannerLeft,
             .mobile-banner-spacer {
                 height: 40%;
@@ -756,9 +699,7 @@ span {
                 padding-right: 0;
             }
 
-
-
-            // RIGHT 
+            // RIGHT
             .bannerRight {
                 border: none;
                 height: 100%;
@@ -797,12 +738,12 @@ span {
             top: 0;
             line-height: 1.25em;
 
-            >div {
+            > div {
                 position: relative;
                 top: 20%;
             }
 
-            &.spaced>* {
+            &.spaced > * {
                 margin-bottom: 1.2em;
                 line-height: 1.2em;
             }
@@ -816,7 +757,6 @@ span {
         }
 
         .noImage {
-
             &.titlesAndButtons {
                 .titles {
                     background: none;
@@ -934,7 +874,8 @@ span {
     .announcementBanner {
         height: 100%;
 
-        .bannerRight .titlesAndButtons {}
+        .bannerRight .titlesAndButtons {
+        }
     }
 
     .continueBtn {
@@ -948,7 +889,6 @@ span {
 }
 
 @media screen and (max-width: 420px) {
-
     .closeModal {
         width: 28px;
         height: 28px;
@@ -958,8 +898,7 @@ span {
 }
 
 // IE debug
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .dotContainer {
         justify-content: space-around;
         padding: 15px 0;
