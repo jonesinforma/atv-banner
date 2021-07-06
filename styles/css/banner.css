@@ -1,29 +1,29 @@
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 300;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-light.ttf") format("truetype"); }
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-regular.ttf") format("truetype"); }
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-semibold.ttf") format("truetype"); }
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 700;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-bold.ttf") format("truetype"); }
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 800;
   font-style: normal;
   font-display: fallback;
@@ -34,14 +34,14 @@ body {
   margin: 0;
   padding: 0;
   background: lightcoral;
-  font-family: "Muli", Verdana, sans-serif; }
+  font-family: 'Muli', Verdana, sans-serif; }
 
 button {
   border: none;
   -webkit-appearance: none;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
-  font-family: "Muli"; }
+  font-family: 'Muli'; }
 
 .bannerInnerBox {
   box-sizing: border-box;
@@ -331,7 +331,7 @@ span.smallSpace {
     border-color: rgba(255, 255, 255, 0.4);
     border-style: solid; }
     .announcementBanner .bannerRight:before {
-      content: "";
+      content: '';
       position: absolute;
       border-width: 18px;
       border-style: solid;
@@ -365,26 +365,26 @@ span.smallSpace {
 
 .announcementBanner.leftRight .bannerLeft {
   width: calc(50% - 191px);
-  background: #edf0f5; }
+  background: #e3e0e8; }
 .announcementBanner.leftRight .bannerImage {
   position: absolute;
   width: 100%;
   right: 0;
   top: 0px;
   height: 100%;
-  background-image: url(../../images/maintenance3.jpg);
-  background-size: 708px;
+  background-image: url(../../images/rt_quiz_banner_image3b.png);
+  background-size: 613px;
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: 50%; }
 .announcementBanner.leftRight .bannerRight {
-  background: #009447; }
+  background: #942d2d; }
   .announcementBanner.leftRight .bannerRight:before {
-    border-right-color: #009447; }
+    border-right-color: #942d2d; }
 .announcementBanner.leftRight .titlesAndButtons {
   height: 100%;
   text-align: left;
-  padding: 28px 28px 48px; }
+  padding: 28px 28px 44px; }
 .announcementBanner.leftRight .titles {
   height: 100%;
   display: flex;
@@ -394,7 +394,7 @@ span.smallSpace {
   font-size: 62.5%; }
 .announcementBanner.leftRight .mainTitle {
   padding: 0;
-  font-size: 2.3em;
+  font-size: 2.5em;
   line-height: 1.1em;
   letter-spacing: -0.01em; }
   .announcementBanner.leftRight .mainTitle span.standOut {
@@ -402,7 +402,7 @@ span.smallSpace {
     font-weight: 700; }
 .announcementBanner.leftRight .surOrSubTitle {
   position: relative;
-  font-size: 1.55em;
+  font-size: 1.75em;
   line-height: 1.3em;
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -472,19 +472,20 @@ span.smallSpace {
       width: 100%; }
     .announcementBanner.leftRight .bannerLeft,
     .announcementBanner.leftRight .mobile-banner-spacer {
-      height: 120px; }
+      height: 170px; }
     .announcementBanner.leftRight .bannerLeft {
       width: 100%;
       position: absolute;
       z-index: 1;
       top: 45%;
-      transform: translate(-50%, -60px);
+      transform: translate(-50%, -80px);
       left: 50%; }
     .announcementBanner.leftRight .bannerImage {
       position: relative;
       display: block;
       padding-right: 0;
-      background-position-x: 50%; }
+      background-position-x: 50%;
+      background-image: url(../../images/rt_quiz_banner_image4.png); }
     .announcementBanner.leftRight .bannerRight {
       border: none;
       height: 100%; }
@@ -493,7 +494,7 @@ span.smallSpace {
     .announcementBanner.leftRight .titles {
       display: block; }
     .announcementBanner.leftRight .mainTitle {
-      height: calc(45% - 60px);
+      height: calc(40% - 60px);
       display: flex;
       flex-direction: column;
       justify-content: center; }
@@ -502,7 +503,7 @@ span.smallSpace {
     .announcementBanner .mainTitle {
       font-size: 95%; }
     .announcementBanner .surOrSubTitle {
-      height: calc(48% - 113px);
+      height: calc(43% - 113px);
       display: flex;
       flex-direction: column;
       justify-content: center; }

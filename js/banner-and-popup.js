@@ -3,6 +3,7 @@
 
 var bannerShown = true,
 	popupShown = false;
+
 // NOTE: increment banner and popup versions in html <head>
 
 var $surveyBanner, $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody;
