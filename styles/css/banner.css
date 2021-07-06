@@ -457,7 +457,7 @@ span.smallSpace {
   .playPause {
     right: unset;
     left: 0; } }
-@media screen and (max-width: 767px) and (orientation: portrait) {
+@media screen and (max-width: 767px), (orientation: portrait) {
   .shyBreak {
     display: block; }
 
