@@ -43,13 +43,16 @@ $(document).ready(function () {
 				console.log('Banner exists and is hidden');
 
 				$parentBanner.queue(function () {
-					$parentBanner.css('transition', 'all 0s')
+					$parentBanner
 						.removeClass('initial')
 						.removeClass('shown')
 						.addClass('hidden');
 					$parentBanner.dequeue();
 				});
-				$parentBanner.css('transition', 'all 0.8s');
+				setTimeout(function () {
+					$parentBanner.css('transition', 'all 0.8s');
+				}, 2000);
+
 
 				$bannerContents.queue(function () {
 					$bannerContents
@@ -58,10 +61,13 @@ $(document).ready(function () {
 						.addClass('hidden');
 					$bannerContents.dequeue();
 				});
-				$bannerContents.css('transition', 'all 0.8s');
-			} else {
 				setTimeout(function () {
-					$parentBanner.removeClass('initial')
+					$bannerContents.css('transition', 'all 0.8s');
+				}, 2000);
+			} else {
+				$parentBanner.css('transition', 'all 0.8s');
+				setTimeout(function () {
+					$parentBanner.removeClass('initial');
 				}, 2000);
 			}
 
@@ -94,7 +100,7 @@ $(document).ready(function () {
 
 function showHideBanner(elem) {
 	var $elem = $(elem);
-	$elem.closest('.banner').toggleClass('hidden');
+	$elem.closest('.banner').toggleClass('hidden').toggleClass('shown');
 	var $bannerBox = window.parent.$("#bannerBox");
 	if ($bannerBox.hasClass('shown')) {
 		$bannerBox.removeClass('shown').addClass('hidden');

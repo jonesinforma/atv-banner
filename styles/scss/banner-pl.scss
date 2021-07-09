@@ -185,6 +185,7 @@ span {
     font-family: 'Muli';
     font-weight: 700;
     color: #14121a;
+    cursor: pointer;
 }
 
 .displayIsNone {
@@ -287,9 +288,28 @@ span {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .announcementBanner {
+        justify-content: center;
+
+        .titlesAndButtons {
+            padding: 0 22px 12px;
+        }
+
+        .bannerImage {
+            background-size: 100%;
+            height: 180px;
+        }
+    }
+}
+
 @media screen and (max-width: 767px) and (orientation: portrait) {
     .shyBreak {
         display: block;
+    }
+
+    .bannerBox.hidden {
+        top: 0;
     }
 
     .bannerInnerBox {
