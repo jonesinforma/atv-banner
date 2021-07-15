@@ -139,7 +139,8 @@ span.smallSpace {
   font-size: 0.75em;
   font-family: 'Muli';
   font-weight: 700;
-  color: #14121a; }
+  color: #14121a;
+  cursor: pointer; }
 
 .displayIsNone {
   display: none !important; }
@@ -220,6 +221,14 @@ span.smallSpace {
 .logged-in .for-Mobile {
   display: none !important; }
 
+@media screen and (max-width: 727px) {
+  .announcementBanner {
+    justify-content: center; }
+    .announcementBanner .titlesAndButtons {
+      padding: 0 22px 12px; }
+    .announcementBanner .bannerImage {
+      background-size: 100%;
+      height: 180px; } }
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .shyBreak {
     display: block; }
@@ -230,36 +239,10 @@ span.smallSpace {
 
   .announcementBanner {
     height: 100%;
-    width: 100vw; }
-    .announcementBanner.leftRight .bannerLeft,
-    .announcementBanner.leftRight .mobile-banner-spacer {
-      height: 40%; }
-    .announcementBanner.leftRight .bannerLeft {
-      width: 100%;
-      position: absolute;
-      z-index: 1;
-      top: 50%;
-      transform: translate(-50%, -60%);
-      left: 50%; }
-    .announcementBanner.leftRight .bannerImage {
-      position: relative;
-      display: block;
-      padding-right: 0; }
-    .announcementBanner.leftRight .bannerRight {
-      border: none;
-      height: 100%; }
-      .announcementBanner.leftRight .bannerRight .titlesAndButtons {
-        padding: 0 24px; }
-    .announcementBanner.leftRight .mainTitle {
-      flex: 1 1 26%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-    .announcementBanner.leftRight .mobile-banner-spacer {
-      flex: 1 1 40%;
-      width: 100%; }
-    .announcementBanner.leftRight .surOrSubTitle {
-      flex: 1 1 34%; }
+    width: 100vw;
+    justify-content: center; }
+    .announcementBanner .titlesAndButtons {
+      padding: 0 5%; }
     .announcementBanner .mainTitle {
       font-size: 95%; }
     .announcementBanner .surOrSubTitle {
@@ -279,6 +262,10 @@ span.smallSpace {
       min-width: 110px;
       padding: 9px 12px;
       margin-top: 8px; }
+    .announcementBanner .bannerImage {
+      background-size: 100%;
+      background-position: 50% 100%;
+      height: 52%; }
     .announcementBanner .noImage.titlesAndButtons .titles {
       background: none;
       display: flex;
@@ -299,9 +286,6 @@ span.smallSpace {
       padding: 5px 14px 6px; }
     .announcementBanner.atvWelcome .bannerRight .titlesAndButtons {
       padding: 10px 10px 150px 10px; }
-
-  .logged-in .announcementBanner.leftRight .bannerLeft {
-    width: 100%; }
 
   .continueBtn {
     display: inline-block; }

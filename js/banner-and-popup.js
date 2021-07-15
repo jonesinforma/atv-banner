@@ -39,6 +39,8 @@ $(document).ready(function () {
 		$popupIframe = $parentBody.find('.popup-iframe');
 
 		if (bannerExists) {
+
+			// Stow banner in menuBar, no transition.
 			if ($.cookie("bannerHidden" + bannerEdition)) {
 				console.log('Banner exists and is hidden');
 
@@ -65,6 +67,8 @@ $(document).ready(function () {
 					$bannerContents.css('transition', 'all 0.8s');
 				}, 2000);
 			} else {
+
+				// Slide banner down;
 				$parentBanner.css('transition', 'all 0.8s');
 				setTimeout(function () {
 					$parentBanner.removeClass('initial');
@@ -72,6 +76,7 @@ $(document).ready(function () {
 			}
 
 		} else {
+			// Banner does not exist
 			$parentBody.addClass('noBanner');
 		}
 
