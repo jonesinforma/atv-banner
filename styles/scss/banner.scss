@@ -38,6 +38,22 @@
     src: url('../../fonts/muli/muli-black.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/fsmep/fsme.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 800;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/fsmep/fsme-bold.otf') format('opentype');
+}
+
 body {
     width: 100%;
     height: 100vh;
@@ -146,18 +162,6 @@ span {
 
 .continueBtn {
     display: none;
-    bottom: 18%;
-    position: absolute;
-    color: #726a7c;
-    background: white;
-    height: 50px;
-    padding: 0px 18px;
-    border-radius: 25px;
-    left: 50vw;
-    font-size: 16px;
-    font-weight: 600;
-    transform: translate(-50%, 50%);
-    z-index: 10;
 }
 
 .logged-in {
@@ -559,8 +563,8 @@ span {
 
     .bannerImage {
         position: absolute;
-        width: 100%;
-        right: 10px;
+        width: 500px;
+        right: 0px;
         top: 0px;
         height: 100%;
         background-image: url(../../images/instagram_banner_image2.png);
@@ -569,17 +573,16 @@ span {
         background-position-x: 100%;
         background-position-y: 50%;
     }
+
     .bannerGradient {
         position: absolute;
-        right: 171px;
+        right: 520px;
         top: 0;
-        background: rgb(226, 230, 238);
-        background: linear-gradient(
-            90deg,
-            rgba(226, 230, 238, 1) 0%,
-            rgba(45, 57, 73, 1) 35%,
-            rgba(45, 57, 73, 1) 100%
-        );
+        background: #e2e6ee;
+        background: linear-gradient(90deg, #e2e6ee 0px, #2d3948 100%);
+        width: 520px;
+        height: 100%;
+        // background: #2d3949;
     }
 
     .bannerRight {
@@ -623,8 +626,8 @@ span {
         line-height: 1.1em;
         font-weight: 400;
         letter-spacing: 0.01em;
-        max-width: 580px;
-        font-family: 'FS Me';
+        max-width: 600px;
+        font-family: 'FSMeP', 'Muli', 'Verdana', sans-serif;
         color: #465464;
 
         &.small .button-text {
@@ -660,14 +663,6 @@ span {
     }
 }
 
-.logged-in {
-    .announcementBanner.leftRight {
-        .bannerLeft {
-            width: calc(50% - 255px);
-        }
-    }
-}
-
 @media screen and(max-width: 1220px) {
     .announcementBanner.leftRight {
         .titles {
@@ -676,9 +671,24 @@ span {
     }
 }
 
-@media screen and(max-width: 1024px) {
-    .announcementBanner.leftRight .bannerImage {
-        background-size: 608px;
+@media screen and(max-width: 1480px) {
+    .announcementBanner.leftRight {
+        .bannerLeft {
+            width: calc(50% - 30px);
+        }
+
+        .bannerRight {
+            width: calc(50% + 30px);
+        }
+
+        .mainTitle {
+            padding: 0;
+            font-size: 2.5em;
+        }
+
+        .surOrSubTitle {
+            font-size: 1.5em;
+        }
     }
 }
 
@@ -743,6 +753,14 @@ span {
     }
 }
 
+:root {
+    --bannerImageHeight: 130px;
+    --imageAdjust: var(--bannerImageHeight);
+    --bannerTopSpace: calc(54% - var(--imageAdjust));
+    --bannerSubSpace: 23%;
+    --bannerBottomSpace: 23%;
+}
+
 @media screen and (max-width: 767px), (orientation: portrait) {
     .shyBreak {
         display: block;
@@ -753,11 +771,22 @@ span {
         display: flex;
     }
 
+    .continueBtn-spacer {
+        width: 100%;
+        position: absolute;
+        height: var(--bannerBottomSpace);
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .announcementBanner {
         height: 100%;
         width: 100vw;
 
-        .mobile-banner-spacer {
+        .mobile-banner-spacer,
+        .mobile-banner-spacer-bottom {
             width: 100%;
         }
 
@@ -765,24 +794,33 @@ span {
             // LEFT
             .bannerLeft,
             .mobile-banner-spacer {
-                height: 170px;
+                height: var(--bannerImageHeight);
+            }
+
+            .bannerGradient {
+                display: none;
+            }
+
+            .continueBtn-spacer,
+            .mobile-banner-spacer-bottom {
+                height: var(--bannerBottomSpace);
             }
 
             .bannerLeft {
                 width: 100%;
                 position: absolute;
                 z-index: 1;
-                top: 45%;
-                transform: translate(-50%, -80px);
-                left: 50%;
+                top: var(--bannerTopSpace);
+                justify-content: center;
             }
 
             .bannerImage {
+                height: var(--bannerImageHeight);
                 position: relative;
                 display: block;
                 padding-right: 0;
+                background-size: 545px;
                 background-position-x: 50%;
-                background-image: url(../../images/rt_quiz_banner_image4.png);
             }
 
             // RIGHT
@@ -790,24 +828,29 @@ span {
                 border: none;
                 height: 100%;
 
+                &:before {
+                    display: none;
+                }
+
                 .titlesAndButtons {
-                    padding: 0 24px;
+                    padding: 0 32px;
                 }
             }
 
-            .titles {
-                display: block;
-            }
-
             .mainTitle {
-                height: calc(40% - 60px);
+                font-size: 2.7em;
+                height: var(--bannerTopSpace);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                max-width: 324px;
             }
 
             .surOrSubTitle {
-                flex: 1 1 34%;
+                font-size: 1.7em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 max-width: 435px;
             }
         }
@@ -817,7 +860,7 @@ span {
         }
 
         .surOrSubTitle {
-            height: calc(43% - 113px);
+            height: var(--bannerSubSpace);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -886,13 +929,19 @@ span {
 
     .continueBtn {
         display: inline-block;
+        color: #ffffff;
+        background: #04b03e;
+        height: 40px;
+        padding: 0px 18px;
+        border-radius: 25px;
+        font-weight: 600;
+        z-index: 10;
 
         p {
-            font-size: 18px;
+            font-size: 16px;
             margin: 0;
             padding: 0;
             font-weight: 600;
-            letter-spacing: -0.02em;
         }
     }
 
@@ -955,15 +1004,6 @@ span {
 
         .bannerRight .titlesAndButtons {
         }
-    }
-
-    .continueBtn {
-        font-size: 16px;
-        font-weight: 600;
-        bottom: 13%;
-        height: 36px;
-        display: flex;
-        align-items: center;
     }
 }
 
