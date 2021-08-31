@@ -63,10 +63,16 @@ $(document).ready(function () {
 						.addClass('hidden');
 					$bannerContents.dequeue();
 				});
+
 				setTimeout(function () {
 					$bannerContents.css('transition', 'all 0.8s');
 				}, 2000);
+
 			} else {
+
+				// if (window.innerWidth > 767) {
+				// 	slideBannerDown($parentBanner);
+				// }
 
 				// Slide banner down;
 				$parentBanner.css('transition', 'all 0.8s');
