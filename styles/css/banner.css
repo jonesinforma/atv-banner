@@ -57,7 +57,7 @@ span.semibold {
 span.bold {
   font-weight: 800; }
 span.smallSpace {
-  letter-spacing: -0.1em; }
+  letter-spacing: -0.15em; }
 
 .displayIsNone {
   display: none !important; }
@@ -353,8 +353,6 @@ span.smallSpace {
   .announcementBanner .titles {
     box-sizing: border-box;
     line-height: 1.15em; }
-    .announcementBanner .titles strong {
-      font-weight: 400; }
   .announcementBanner .mainTitle {
     line-height: 1.3em;
     padding: 2px 0; }
@@ -365,18 +363,14 @@ span.smallSpace {
 
 .announcementBanner.leftRight .bannerLeft {
   width: calc(50% - 191px);
-  background: #e3e0e8; }
+  background: #c0b6c5; }
 .announcementBanner.leftRight .bannerImage {
   position: absolute;
   width: 100%;
   right: 0;
   top: 0px;
   height: 100%;
-  background-image: url(../../images/rt_quiz_banner_image3b.png);
-  background-size: 613px;
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 50%; }
+  background: url(../../images/thirtieth10.png) 100%/auto 100% no-repeat; }
 .announcementBanner.leftRight .bannerRight {
   background: #942d2d; }
   .announcementBanner.leftRight .bannerRight:before {
@@ -384,7 +378,7 @@ span.smallSpace {
 .announcementBanner.leftRight .titlesAndButtons {
   height: 100%;
   text-align: left;
-  padding: 28px 28px 44px; }
+  padding: 28px 28px 38px; }
 .announcementBanner.leftRight .titles {
   height: 100%;
   display: flex;
@@ -394,7 +388,7 @@ span.smallSpace {
   font-size: 62.5%; }
 .announcementBanner.leftRight .mainTitle {
   padding: 0;
-  font-size: 2.5em;
+  font-size: 2.8em;
   line-height: 1.1em;
   letter-spacing: -0.01em; }
   .announcementBanner.leftRight .mainTitle span.standOut {
@@ -402,7 +396,7 @@ span.smallSpace {
     font-weight: 700; }
 .announcementBanner.leftRight .surOrSubTitle {
   position: relative;
-  font-size: 1.75em;
+  font-size: 1.85em;
   line-height: 1.3em;
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -428,27 +422,21 @@ span.smallSpace {
 @media screen and (max-width: 1220px) {
   .announcementBanner.leftRight .titles {
     max-width: 710px; } }
-@media screen and (max-width: 1024px) {
-  .announcementBanner.leftRight .bannerImage {
-    background-size: 608px; } }
 @media screen and (max-width: 1023px) {
-  .announcementBanner.leftRight .titles {
+  .announcementBanner.leftRight .titles,
+  .logged-in .announcementBanner.leftRight .titles {
     max-width: 800px; }
-  .announcementBanner.leftRight .bannerImage {
-    display: none; }
-  .announcementBanner.leftRight .bannerRight {
-    width: 100vw; }
-    .announcementBanner.leftRight .bannerRight .titlesAndButtons {
-      width: 100%;
-      text-align: center;
-      align-items: center; }
-  .announcementBanner.leftRight .titles {
-    align-items: center; }
-  .announcementBanner.leftRight .bannerLeft {
-    width: 0; }
-  .announcementBanner.leftRight.atvWelcome .bannerRight .titlesAndButtons {
+  .announcementBanner.leftRight .bannerRight,
+  .logged-in .announcementBanner.leftRight .bannerRight {
+    width: calc(50% + 132px); }
+  .announcementBanner.leftRight .bannerLeft,
+  .logged-in .announcementBanner.leftRight .bannerLeft {
+    width: calc(50% - 132px); }
+  .announcementBanner.leftRight.atvWelcome .bannerRight .titlesAndButtons,
+  .logged-in .announcementBanner.leftRight.atvWelcome .bannerRight .titlesAndButtons {
     padding: 10px 10px 5px 10px; }
-  .announcementBanner.leftRight.atvWelcome .mainTitle {
+  .announcementBanner.leftRight.atvWelcome .mainTitle,
+  .logged-in .announcementBanner.leftRight.atvWelcome .mainTitle {
     font-size: 23px; } }
 @media screen and (max-width: 900px) {
   .announcementBanner.leftRight .titles {
@@ -463,29 +451,29 @@ span.smallSpace {
 
   .bannerInnerBox {
     width: 100vw;
-    display: flex; }
+    display: flex;
+    background-color: #942d2d; }
 
   .announcementBanner {
-    height: 100%;
+    height: calc(100% - 13% - 18px);
     width: 100vw; }
     .announcementBanner .mobile-banner-spacer {
-      width: 100%; }
+      width: 100%;
+      height: 180px; }
     .announcementBanner.leftRight .bannerLeft,
     .announcementBanner.leftRight .mobile-banner-spacer {
-      height: 170px; }
+      height: 180px; }
     .announcementBanner.leftRight .bannerLeft {
       width: 100%;
       position: absolute;
-      z-index: 1;
-      top: 45%;
-      transform: translate(-50%, -80px);
-      left: 50%; }
+      z-index: 1; }
     .announcementBanner.leftRight .bannerImage {
       position: relative;
       display: block;
       padding-right: 0;
-      background-position-x: 50%;
-      background-image: url(../../images/rt_quiz_banner_image4.png); }
+      background-position-x: center;
+      background-image: url(../../images/thirtieth_logo4.png);
+      background-size: auto 100%; }
     .announcementBanner.leftRight .bannerRight {
       border: none;
       height: 100%; }
@@ -494,12 +482,15 @@ span.smallSpace {
     .announcementBanner.leftRight .titles {
       display: block; }
     .announcementBanner.leftRight .mainTitle {
-      height: calc(40% - 60px);
+      height: calc(50% - 90px);
       display: flex;
       flex-direction: column;
-      justify-content: center; }
+      justify-content: center;
+      text-align: center; }
     .announcementBanner.leftRight .surOrSubTitle {
-      flex: 1 1 34%; }
+      height: calc(50% - 90px);
+      text-align: center;
+      max-width: initial; }
     .announcementBanner .mainTitle {
       font-size: 95%; }
     .announcementBanner .surOrSubTitle {
@@ -586,9 +577,6 @@ span.smallSpace {
   .bannerText {
     font-size: 15px; } }
 @media screen and (min-height: 131px) {
-  .announcementBanner {
-    height: 100%; }
-
   .continueBtn {
     font-size: 16px;
     font-weight: 600;
