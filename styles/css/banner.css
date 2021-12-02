@@ -181,10 +181,10 @@ span.smallSpace {
   .announcementBanner.fullWidth .mainTitle {
     font-size: 26px; }
   .announcementBanner.fullWidth .surOrSubTitle {
-    font-size: 70%;
-    margin-bottom: 8px; }
+    font-size: 75%;
+    margin-bottom: 12px; }
     .announcementBanner.fullWidth .surOrSubTitle.small {
-      font-size: 65%;
+      font-size: 60%;
       line-height: 1.25em;
       margin-bottom: 0; }
   .announcementBanner.welcome.fullWidth .bannerRight {
@@ -225,7 +225,7 @@ span.smallSpace {
   .announcementBanner.pprofilesBeta .bannerRight {
     background: url(../../images/pprofiles_beta.jpg) 50%/auto 131px; }
   .announcementBanner.pprofilesBeta .titlesAndButtons {
-    padding: 12px 40px 12px 40px;
+    padding: 16px 40px 12px 40px;
     display: flex;
     flex-direction: column;
     align-items: center; }
@@ -473,6 +473,10 @@ span.smallSpace {
       display: block;
       padding-right: 0;
       left: 6px; }
+    .announcementBanner.pprofilesBeta.fullWidth .surOrSubTitle {
+      font-size: 70%; }
+    .announcementBanner.pprofilesBeta .bannerRight {
+      background: url(../../images/pprofiles_beta_mobile.jpg) 50%/840px auto; }
     .announcementBanner.pprofilesBeta .titles {
       max-width: 520px; }
     .announcementBanner.dandc .bannerRight {
@@ -485,7 +489,7 @@ span.smallSpace {
     .announcementBanner .bannerRight {
       height: 100%; }
       .announcementBanner .bannerRight .titlesAndButtons {
-        padding: 5px 24px 18%; }
+        padding: 5px 24px 70px; }
     .announcementBanner .mainTitle {
       font-size: 95%; }
     .announcementBanner .surOrSubTitle {
@@ -530,7 +534,7 @@ span.smallSpace {
   .continueBtn {
     display: inline-block; }
     .continueBtn p {
-      font-size: 18px;
+      font-size: 15px;
       margin: 0;
       padding: 0;
       font-weight: 600;
@@ -580,7 +584,7 @@ span.smallSpace {
   .continueBtn {
     font-size: 16px;
     font-weight: 600;
-    bottom: 22%;
+    bottom: 65px;
     height: 36px;
     display: flex;
     align-items: center; } }
