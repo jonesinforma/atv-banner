@@ -2,7 +2,7 @@
 /* global $, console, f, g */
 
 var bannerShown = true,
-	popupShown = false;
+	popupShown = true;
 
 var $surveyBanner, $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody;
 var bannerHeight = 130,

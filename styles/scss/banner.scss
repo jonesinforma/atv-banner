@@ -1,41 +1,33 @@
 @font-face {
-    font-family: 'Muli';
+    font-family: 'FSMeP';
     font-weight: 300;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-light.ttf") format("truetype");
+    src: url('../../fonts/fsme-p/fsme-p-light.otf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Muli';
+    font-family: 'FSMeP';
     font-weight: 400;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-regular.ttf") format("truetype");
+    src: url('../../fonts/fsme-p/fsme-p.otf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Muli';
+    font-family: 'FSMeP';
     font-weight: 600;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-semibold.ttf") format("truetype");
+    src: url('../../fonts/fsme-p/fsme-p-bold.otf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Muli';
-    font-weight: 700;
-    font-style: normal;
-    font-display: fallback;
-    src: url("../../fonts/muli/muli-bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: 'Muli';
+    font-family: 'FSMeP';
     font-weight: 800;
     font-style: normal;
     font-display: fallback;
-    src: url("../../fonts/muli/muli-black.ttf") format("truetype");
+    src: url('../../fonts/fsme-p/fsme-p-black.otf') format('truetype');
 }
 
 body {
@@ -44,7 +36,7 @@ body {
     margin: 0;
     padding: 0;
     background: lightcoral;
-    font-family: 'Muli', Verdana, sans-serif;
+    font-family: 'FSMeP', Verdana, sans-serif;
 }
 
 button {
@@ -52,7 +44,7 @@ button {
     -webkit-appearance: none;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
-    font-family: 'Muli';
+    font-family: 'FSMeP';
 }
 
 .bannerInnerBox {
@@ -65,7 +57,7 @@ button {
 }
 
 span {
-    &.avoidwrap {
+    &.avoidWrap {
         display: inline-block;
     }
 
@@ -161,7 +153,6 @@ span {
     z-index: 10;
 }
 
-
 .logged-out .for-TitlesPage {
     display: none !important;
 }
@@ -194,8 +185,9 @@ span {
     align-items: center;
     justify-content: center;
     text-align: left;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
+    color: #3f3b4f;
+    font-family: 'FSMeP';
+    font-weight: 600;
     padding: 0;
     height: 131px;
     position: relative;
@@ -204,11 +196,12 @@ span {
     overflow: hidden;
 
     a {
-        font-weight: 600;
-        text-decoration: none;
+        font-weight: 700;
+        text-decoration: underline;
+        color: #3f3b4f;
     }
 
-    &.noImage {
+    &.fullWidth {
         .bannerImage {
             display: block;
 
@@ -248,23 +241,21 @@ span {
         }
 
         .surOrSubTitle {
-            font-size: 90%;
-            margin-bottom: 5px;
-            color: rgba(255, 255, 255, 0.75);
+            font-size: 70%;
+            margin-bottom: 8px;
 
             &.small {
-                font-size: 70%;
+                font-size: 65%;
                 line-height: 1.25em;
                 margin-bottom: 0;
-                color: rgba(255, 255, 255, 0.7);
             }
         }
     }
 
     &.welcome {
-        &.noImage {
+        &.fullWidth {
             .bannerRight {
-                background: #3469a2
+                background: #3469a2;
             }
 
             .titlesAndButtons {
@@ -285,7 +276,7 @@ span {
     }
 
     &.helpImprovements {
-        &.noImage {
+        &.fullWidth {
             .bannerRight {
                 background: hsla(345, 60%, 40%, 1);
             }
@@ -324,13 +315,13 @@ span {
         }
     }
 
-    &.launchingQuiz {
+    &.pprofilesBeta {
         .bannerRight {
-            background: #007f80;
+            background: url(../../images/pprofiles_beta.jpg) 50% / auto 131px;
         }
 
         .titlesAndButtons {
-            padding: 2px 40px 5px 40px;
+            padding: 12px 40px 12px 40px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -341,27 +332,22 @@ span {
         }
 
         .mainTitle {
-            margin-bottom: 10px;
-            font-size: 21px;
+            font-size: 22px;
             line-height: 1.2em;
-        }
-
-        .surOrSubTitle.small {
-            font-size: 80%;
-            color: rgba(255, 255, 255, 0.8);
         }
 
         span.standOut {
             font-size: 110%;
-            color: #89d75b;
+            color: #e84e0f;
             font-weight: 700;
+            text-shadow: 0px 0px 8px white, 0px 0px 8px white;
         }
 
         a span {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 105%;
-            border-bottom: 2px dotted rgba(255, 255, 255, 0.5);
-            padding-bottom: 3px;
+            color: #3f3b4f;
+            border-bottom: 1px solid #3f3b4f;
+            padding-bottom: 0px;
+            font-weight: 800;
 
             &:hover {
                 // color: hsla(34, 100%, 55%, 1);
@@ -515,13 +501,13 @@ span {
 
     .surOrSubTitle {
         font-size: 85%;
-        line-height: 1.15em;
+        line-height: 1.25em;
         padding: 0px 0 2px;
+        text-shadow: 0px 0px 4px white;
     }
 }
 
 .announcementBanner.leftRight {
-
     .bannerLeft {
         width: calc(50% - 256px);
     }
@@ -544,7 +530,7 @@ span {
         padding: 0;
         line-height: 1.2em;
 
-        +.surOrSubTitle {
+        + .surOrSubTitle {
             top: -5px;
         }
 
@@ -628,8 +614,6 @@ span {
     }
 }
 
-
-
 @media screen and (max-width: 1024px) {
     .announcementBanner {
         &.augReality .bannerImage img {
@@ -664,7 +648,6 @@ span {
             width: 0;
         }
 
-
         &.atvWelcome {
             .bannerRight .titlesAndButtons {
                 padding: 10px 10px 5px 10px;
@@ -688,9 +671,7 @@ span {
     }
 }
 
-
 @media screen and (max-width: 767px) and (orientation: portrait) {
-
     .shyBreak {
         display: block;
     }
@@ -705,7 +686,6 @@ span {
         width: 100vw;
 
         &.leftRight {
-
             .bannerRight {
                 border: none;
             }
@@ -760,7 +740,7 @@ span {
             }
         }
 
-        &.launchingQuiz .titles {
+        &.pprofilesBeta .titles {
             max-width: 520px;
         }
 
@@ -780,7 +760,6 @@ span {
         }
 
         .bannerRight {
-
             height: 100%;
 
             .titlesAndButtons {
@@ -798,7 +777,7 @@ span {
             font-size: 68%;
             font-size: 75%;
 
-            &.spaced>* {
+            &.spaced > * {
                 margin-bottom: 1.2em;
                 line-height: 1.2em;
             }
@@ -811,8 +790,7 @@ span {
             margin-top: 8px;
         }
 
-        .noImage {
-
+        .fullWidth {
             &.titlesAndButtons {
                 .titles {
                     background: none;
@@ -929,12 +907,11 @@ span {
     }
 }
 
-@media screen and (min-height: 131px){
+@media screen and (min-height: 131px) {
     .announcementBanner {
         height: 100%;
 
         .bannerRight .titlesAndButtons {
-
         }
     }
 
@@ -949,7 +926,6 @@ span {
 }
 
 @media screen and (max-width: 420px) {
-
     .closeModal {
         width: 28px;
         height: 28px;
@@ -959,8 +935,7 @@ span {
 }
 
 // IE debug
-@media screen and (-ms-high-contrast: active),
-(-ms-high-contrast: none) {
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .dotContainer {
         justify-content: space-around;
         padding: 15px 0;

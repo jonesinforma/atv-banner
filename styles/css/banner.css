@@ -1,47 +1,41 @@
 @font-face {
-  font-family: 'Muli';
+  font-family: 'FSMeP';
   font-weight: 300;
   font-style: normal;
   font-display: fallback;
-  src: url("../../fonts/muli/muli-light.ttf") format("truetype"); }
+  src: url("../../fonts/fsme-p/fsme-p-light.otf") format("truetype"); }
 @font-face {
-  font-family: 'Muli';
+  font-family: 'FSMeP';
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-  src: url("../../fonts/muli/muli-regular.ttf") format("truetype"); }
+  src: url("../../fonts/fsme-p/fsme-p.otf") format("truetype"); }
 @font-face {
-  font-family: 'Muli';
+  font-family: 'FSMeP';
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
-  src: url("../../fonts/muli/muli-semibold.ttf") format("truetype"); }
+  src: url("../../fonts/fsme-p/fsme-p-bold.otf") format("truetype"); }
 @font-face {
-  font-family: 'Muli';
-  font-weight: 700;
-  font-style: normal;
-  font-display: fallback;
-  src: url("../../fonts/muli/muli-bold.ttf") format("truetype"); }
-@font-face {
-  font-family: 'Muli';
+  font-family: 'FSMeP';
   font-weight: 800;
   font-style: normal;
   font-display: fallback;
-  src: url("../../fonts/muli/muli-black.ttf") format("truetype"); }
+  src: url("../../fonts/fsme-p/fsme-p-black.otf") format("truetype"); }
 body {
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
   background: lightcoral;
-  font-family: 'Muli', Verdana, sans-serif; }
+  font-family: 'FSMeP', Verdana, sans-serif; }
 
 button {
   border: none;
   -webkit-appearance: none;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0);
-  font-family: 'Muli'; }
+  font-family: 'FSMeP'; }
 
 .bannerInnerBox {
   box-sizing: border-box;
@@ -51,7 +45,7 @@ button {
   overflow: hidden;
   text-align: center; }
 
-span.avoidwrap {
+span.avoidWrap {
   display: inline-block; }
 span.semibold {
   font-weight: 700; }
@@ -149,8 +143,9 @@ span.smallSpace {
   align-items: center;
   justify-content: center;
   text-align: left;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 300;
+  color: #3f3b4f;
+  font-family: 'FSMeP';
+  font-weight: 600;
   padding: 0;
   height: 131px;
   position: relative;
@@ -158,61 +153,60 @@ span.smallSpace {
   font-size: 21px;
   overflow: hidden; }
   .announcementBanner a {
-    font-weight: 600;
-    text-decoration: none; }
-  .announcementBanner.noImage .bannerImage {
+    font-weight: 700;
+    text-decoration: underline;
+    color: #3f3b4f; }
+  .announcementBanner.fullWidth .bannerImage {
     display: block; }
-    .announcementBanner.noImage .bannerImage img {
+    .announcementBanner.fullWidth .bannerImage img {
       height: 200px;
       right: -3px;
       position: absolute;
       top: -85px;
       max-width: unset;
       max-height: unset; }
-  .announcementBanner.noImage .bannerLeft {
+  .announcementBanner.fullWidth .bannerLeft {
     width: calc(50% - 190px);
     height: calc(100% - 3px);
     border-bottom: 1px solid #e4e4e7;
     overflow: hidden; }
-  .announcementBanner.noImage .bannerRight {
+  .announcementBanner.fullWidth .bannerRight {
     background: #5c6bb7;
     width: 100%;
     text-align: center; }
-    .announcementBanner.noImage .bannerRight:before {
+    .announcementBanner.fullWidth .bannerRight:before {
       border-right-color: #5c6bb7; }
-  .announcementBanner.noImage .bannerButton div {
+  .announcementBanner.fullWidth .bannerButton div {
     color: #546bab; }
-  .announcementBanner.noImage .mainTitle {
+  .announcementBanner.fullWidth .mainTitle {
     font-size: 26px; }
-  .announcementBanner.noImage .surOrSubTitle {
-    font-size: 90%;
-    margin-bottom: 5px;
-    color: rgba(255, 255, 255, 0.75); }
-    .announcementBanner.noImage .surOrSubTitle.small {
-      font-size: 70%;
+  .announcementBanner.fullWidth .surOrSubTitle {
+    font-size: 70%;
+    margin-bottom: 8px; }
+    .announcementBanner.fullWidth .surOrSubTitle.small {
+      font-size: 65%;
       line-height: 1.25em;
-      margin-bottom: 0;
-      color: rgba(255, 255, 255, 0.7); }
-  .announcementBanner.welcome.noImage .bannerRight {
+      margin-bottom: 0; }
+  .announcementBanner.welcome.fullWidth .bannerRight {
     background: #3469a2; }
-  .announcementBanner.welcome.noImage .titlesAndButtons {
+  .announcementBanner.welcome.fullWidth .titlesAndButtons {
     padding: 8px 40px 80px; }
-  .announcementBanner.welcome.noImage .mainTitle {
+  .announcementBanner.welcome.fullWidth .mainTitle {
     margin-bottom: 6px;
     font-size: 120%; }
-  .announcementBanner.welcome.noImage .surOrSubTitle.small {
+  .announcementBanner.welcome.fullWidth .surOrSubTitle.small {
     font-size: 77%;
     line-height: 0.65em;
     color: rgba(255, 255, 255, 0.9); }
-  .announcementBanner.helpImprovements.noImage .bannerRight {
+  .announcementBanner.helpImprovements.fullWidth .bannerRight {
     background: #a32947; }
-  .announcementBanner.helpImprovements.noImage .titlesAndButtons {
+  .announcementBanner.helpImprovements.fullWidth .titlesAndButtons {
     padding: 8px 40px 0; }
-  .announcementBanner.helpImprovements.noImage .mainTitle {
+  .announcementBanner.helpImprovements.fullWidth .mainTitle {
     margin-bottom: 6px;
     font-weight: 300;
     font-size: 110%; }
-  .announcementBanner.helpImprovements.noImage .surOrSubTitle.small {
+  .announcementBanner.helpImprovements.fullWidth .surOrSubTitle.small {
     font-size: 77%;
     line-height: 0.65em;
     color: rgba(255, 255, 255, 0.9); }
@@ -228,31 +222,28 @@ span.smallSpace {
   .announcementBanner.helpImprovements .productGroupButton.info {
     border: none;
     cursor: default; }
-  .announcementBanner.launchingQuiz .bannerRight {
-    background: #007f80; }
-  .announcementBanner.launchingQuiz .titlesAndButtons {
-    padding: 2px 40px 5px 40px;
+  .announcementBanner.pprofilesBeta .bannerRight {
+    background: url(../../images/pprofiles_beta.jpg) 50%/auto 131px; }
+  .announcementBanner.pprofilesBeta .titlesAndButtons {
+    padding: 12px 40px 12px 40px;
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .announcementBanner.launchingQuiz .titles {
+  .announcementBanner.pprofilesBeta .titles {
     max-width: 800px; }
-  .announcementBanner.launchingQuiz .mainTitle {
-    margin-bottom: 10px;
-    font-size: 21px;
+  .announcementBanner.pprofilesBeta .mainTitle {
+    font-size: 22px;
     line-height: 1.2em; }
-  .announcementBanner.launchingQuiz .surOrSubTitle.small {
-    font-size: 80%;
-    color: rgba(255, 255, 255, 0.8); }
-  .announcementBanner.launchingQuiz span.standOut {
+  .announcementBanner.pprofilesBeta span.standOut {
     font-size: 110%;
-    color: #89d75b;
-    font-weight: 700; }
-  .announcementBanner.launchingQuiz a span {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 105%;
-    border-bottom: 2px dotted rgba(255, 255, 255, 0.5);
-    padding-bottom: 3px; }
+    color: #e84e0f;
+    font-weight: 700;
+    text-shadow: 0px 0px 8px white, 0px 0px 8px white; }
+  .announcementBanner.pprofilesBeta a span {
+    color: #3f3b4f;
+    border-bottom: 1px solid #3f3b4f;
+    padding-bottom: 0px;
+    font-weight: 800; }
   .announcementBanner .atvSearch .surOrSubTitle.small span {
     padding: 5px 20px 6px;
     background: #414c86;
@@ -346,8 +337,9 @@ span.smallSpace {
     padding: 2px 0; }
   .announcementBanner .surOrSubTitle {
     font-size: 85%;
-    line-height: 1.15em;
-    padding: 0px 0 2px; }
+    line-height: 1.25em;
+    padding: 0px 0 2px;
+    text-shadow: 0px 0px 4px white; }
 
 .announcementBanner.leftRight .bannerLeft {
   width: calc(50% - 256px); }
@@ -481,7 +473,7 @@ span.smallSpace {
       display: block;
       padding-right: 0;
       left: 6px; }
-    .announcementBanner.launchingQuiz .titles {
+    .announcementBanner.pprofilesBeta .titles {
       max-width: 520px; }
     .announcementBanner.dandc .bannerRight {
       justify-content: flex-start; }
@@ -509,19 +501,19 @@ span.smallSpace {
       min-width: 110px;
       padding: 9px 12px;
       margin-top: 8px; }
-    .announcementBanner .noImage.titlesAndButtons .titles {
+    .announcementBanner .fullWidth.titlesAndButtons .titles {
       background: none;
       display: flex;
       flex-direction: column;
       justify-content: space-around; }
-    .announcementBanner .noImage.helpImprovements .surOrSubTitle.small {
+    .announcementBanner .fullWidth.helpImprovements .surOrSubTitle.small {
       line-height: 1.4em; }
-      .announcementBanner .noImage.helpImprovements .surOrSubTitle.small.inlineImage {
+      .announcementBanner .fullWidth.helpImprovements .surOrSubTitle.small.inlineImage {
         line-height: 0.7em;
         margin-bottom: 40px; }
-    .announcementBanner .noImage .surOrSubTitle.small {
+    .announcementBanner .fullWidth .surOrSubTitle.small {
       margin-bottom: 20px; }
-      .announcementBanner .noImage .surOrSubTitle.small:nth-child(2) {
+      .announcementBanner .fullWidth .surOrSubTitle.small:nth-child(2) {
         margin-top: 20px;
         margin-bottom: 0; }
     .announcementBanner .button-text {
