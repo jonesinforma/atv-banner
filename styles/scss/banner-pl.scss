@@ -1,4 +1,57 @@
 @font-face {
+    font-family: 'FSMeP';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../../fonts/fsme/FSMe-P-Light.otf') format('opentype');
+}
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../fonts/fsme/FSMe-P.otf') format('opentype');
+}
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../../fonts/fsme/FSMe-P-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../../fonts/fsme/FSMe-P-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../../fonts/fsme/FSMe-P-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../../fonts/fsme/FSMe-P.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../../fonts/fsme/FSMe-P-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../../fonts/fsme/FSMe-P-Black.woff') format('woff');
+}
+
+@font-face {
     font-family: 'Muli';
     font-weight: 300;
     font-style: normal;
@@ -44,7 +97,7 @@ body {
     margin: 0;
     padding: 0;
     background: lightcoral;
-    font-family: 'Muli', Verdana, sans-serif;
+    font-family: 'FSMeP', Verdana, sans-serif;
 }
 
 span {
@@ -66,20 +119,31 @@ span {
 }
 
 .showHide {
-    position: absolute;
-    width: 32px;
-    height: 32px;
     right: calc(0% + 6px);
-    bottom: 8px;
-    border-radius: 50%;
-    background: #bdc8db url(../../images/cross-dark.svg) 50%/80% no-repeat;
-    cursor: pointer;
-    border: none;
     transition: all 0.8s;
-    transform: translate(0, 3px);
+}
 
-    p {
-        display: none;
+.gotIt-button {
+    left: 8px;
+}
+
+.announcementBanner {
+    button {
+        position: absolute;
+        border-radius: 16px;
+        border: none;
+        padding: 1px 12px 0;
+        background: #bdc7db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.6em;
+        font-family: 'FSMeP';
+        font-weight: 700;
+        color: #14121a;
+        cursor: pointer;
+        height: 28px;
+        bottom: 6px;
     }
 }
 
@@ -90,11 +154,15 @@ span {
         right: calc(50% - 0px);
         bottom: 0px;
         border-radius: 0;
-        background: url(../../images/announcement.svg) 50% -4px/38px no-repeat;
+        background: url(../../images/announcement.svg) 50% no-repeat;
         cursor: pointer;
         transform: translate(50%, 0px);
         width: 76px;
         height: 32px;
+
+        p {
+            opacity: 0;
+        }
     }
 
     .announcementBanner {
@@ -123,16 +191,17 @@ span {
 
     a {
         font-weight: 600;
-        text-decoration: none;
+        color: #3f3c4f;
     }
 
     .bannerImage {
-        background: url(../../images/iPhones-white-multi-1.jpg) 50% -17px/68% no-repeat;
-        width: 100%;
-        height: 240px;
+        background: url(../../images/survey.svg) 50% 100% / auto 100% no-repeat;
+        width: 142px;
+        height: 100px;
         opacity: 1;
         transition: opacity 0.5s;
         transition-delay: 0.1s;
+        margin: 20px 0 3px;
     }
 
     .titlesAndButtons {
@@ -148,7 +217,6 @@ span {
         text-align: center;
         font-weight: 600;
         color: #3f3c4f;
-        margin-bottom: 12px;
 
         strong {
             font-weight: 700;
@@ -156,36 +224,17 @@ span {
     }
 
     .mainTitle {
-        line-height: 1.3em;
-        padding: 2px 0;
+        line-height: 1.1em;
+        padding: 0px 0 0.6em;
         font-size: 1.1em;
         font-weight: 700;
     }
 
     .surOrSubTitle {
-        font-size: 80%;
-        line-height: 1.15em;
-        padding: 0px 0 2px;
+        font-size: 79%;
+        line-height: 1.25em;
+        font-weight: 400;
     }
-}
-
-.gotIt-button {
-    position: absolute;
-    left: 8px;
-    bottom: 8px;
-    height: 32px;
-    width: 92px;
-    border-radius: 16px;
-    border: none;
-    background: #bdc7db;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75em;
-    font-family: 'Muli';
-    font-weight: 700;
-    color: #14121a;
-    cursor: pointer;
 }
 
 .displayIsNone {
@@ -289,18 +338,6 @@ span {
 }
 
 @media screen and (max-width: 727px) {
-    .announcementBanner {
-        justify-content: center;
-
-        .titlesAndButtons {
-            padding: 0 22px 12px;
-        }
-
-        .bannerImage {
-            background-size: 100%;
-            height: 180px;
-        }
-    }
 }
 
 @media screen and (max-width: 767px) and (orientation: portrait) {
@@ -317,10 +354,6 @@ span {
         height: 100%;
         width: 100vw;
         justify-content: center;
-
-        .titlesAndButtons {
-            padding: 0 5%;
-        }
 
         .mainTitle {
             font-size: 95%;
@@ -460,5 +493,25 @@ span {
 
     .bannerText {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .announcementBanner {
+        .mainTitle {
+            font-size: 1em;
+        }
+
+        .surOrSubTitle {
+            font-size: 74%;
+            line-height: 1.15em;
+        }
+    }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .hidden .showHide {
+        height: 40px;
+        background-position: 50% 0;
     }
 }
