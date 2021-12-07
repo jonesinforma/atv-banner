@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 300;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/fsme-p/fsme-p-light.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/fsme-p/fsme-p.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 600;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/fsme-p/fsme-p-bold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FSMeP';
+    font-weight: 800;
+    font-style: normal;
+    font-display: fallback;
+    src: url('../../fonts/fsme-p/fsme-p-black.otf') format('truetype');
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,24 +42,45 @@ body {
     height: 100vh;
     margin: 0;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.95);
     font-display: fallback;
-    font-family: 'Muli', Verdana, sans-serif;
-    color: rgba(255, 255, 255, 0.95);
+    font-family: 'FSMeP', 'Muli', Verdana, sans-serif;
+    color: #3f3b4f;
+
+    background-color: rgba(210, 210, 210, 0.95);
+
+    &.for-pp {
+        background-image: url(../../images/pw_welcome_bg.webp);
+        background-position: 50% 0;
+    }
+}
+
+p + ul {
+    margin-top: -8px;
+}
+
+li {
+    margin-bottom: 8px;
+
+    &:last-of-type {
+        margin-bottom: 40px;
+    }
+
+    span {
+        font-weight: 600;
+    }
 }
 
 .messageBox {
     position: relative;
-    background: lightblue;
     box-shadow: 0 3px 8px 3px rgba(0, 0, 0, 0.1);
-    background-color: #30739c;
+    background-color: #ffffff;
     width: 100%;
     max-width: 680px;
-    padding: 35px 60px 70px 50px;
+    padding: 35px 60px 40px 50px;
+    border-top: 13px solid #e84e0f;
 
     a {
-        color: #ffda95;
-        text-decoration: none;
+        color: #3f3b4f;
         font-weight: 700;
     }
 }
@@ -39,18 +92,57 @@ body {
     background: url(../../images/cross-large-dark.svg) 50% / 100% no-repeat;
     cursor: pointer;
     right: -34px;
-    top: -33px;
+    top: -45px;
     opacity: 0.5;
 }
 
+a.linkButton {
+    font-weight: 700;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-decoration: none;
+
+    > div {
+        background: #e84e0f;
+        padding: 6px 24px;
+        border-radius: 30px;
+        font-size: 15px;
+        font-weight: 400;
+        color: white;
+        box-sizing: border-box;
+        width: 150px;
+        line-height: 1.1em;
+        text-align: center;
+    }
+}
+
 .mainTitle {
-    font-size: 30px;
+    font-size: 26px;
     line-height: 1.1em;
     margin-bottom: 25px;
     font-weight: 300;
 
-    span {
-        font-weight: 700;
+    strong {
+        font-weight: 600;
+    }
+}
+
+.for-ie {
+    body {
+        font-family: 'Muli', Verdana, sans-serif;
+    }
+
+    .mainTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
     }
 }
 
@@ -58,6 +150,10 @@ body {
     font-size: 17px;
     font-weight: 300;
     line-height: 1.25em;
+
+    strong {
+        font-weight: 600;
+    }
 }
 
 .controls {
@@ -77,37 +173,34 @@ body {
         &:before {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 19px;
+            height: 19px;
             right: 0px;
             top: 50%;
             transform: translateY(-50%);
-            border: 2px solid rgba(255, 255, 255, 0.45);
-            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid #a19cb1;
+            background-color: #eae8ed;
         }
 
         p {
             margin: 0 32px 0 0;
             font-size: 13px;
             user-select: none;
-            color: rgba(255, 255, 255, 0.7);
             letter-spacing: 0.03em;
         }
 
         &.clicked {
             p {
-                color: rgba(255, 255, 255, 0.9);
-
                 &:before {
                     content: '';
                     width: 14px;
                     height: 3px;
-                    background: white;
+                    background: #3f3b4f;
                     position: absolute;
                     right: 2px;
                     border-radius: 1px;
                     transform: rotate(305deg);
-                    top: 6px;
+                    top: 5px;
                 }
 
                 &:after {
@@ -115,10 +208,10 @@ body {
                     position: absolute;
                     height: 3px;
                     width: 9px;
-                    background: white;
+                    background: #3f3b4f;
                     right: 11px;
                     transform: rotate(37deg);
-                    top: 10px;
+                    top: 9px;
                 }
             }
         }

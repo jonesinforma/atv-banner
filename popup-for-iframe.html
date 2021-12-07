@@ -19,37 +19,51 @@
     <script src="js/banner-and-popup.js?20201030"></script>
 </head>
 
-<body class="popup">
+<body class="popup for-ie">
 
     <div class="messageBox">
         <div class="mainTitle">
-            From January 2021 browsers will<br><span>end support of Flash</span>
+            <span>
+                From January 2022 Anatomy.tv will<br><strong>no longer support Internet Explorer</strong>
+            </span>
+
+            <span>
+                <img src="images/ie.svg" />
+            </span>
         </div>
 
         <div class="bannerText">
+
             <p>
-                This change will impact our current Quizzes and Activities tab. On the 17th November, to ensure continuity of access, we are launching a new and exciting module to replace our existing Flash-based regional and functional quiz modules. We are also adjusting the layout for some of our older products in the Titles tab of Anatomy.tv. 
+                Nothing will work, sorry... but you really should have updated your browser a long time ago. Get
+                with
+                the times, daddio! Use Chrome, Firefox or Edge! I&nbsp;know change can sometimes be scary, but... trust
+                me,
+                you <strong>have</strong> to embrace this.
+            </p>
+
+
+            <p>
+                More information about both these changes can be found in this <a
+                    href="https://www.primalpictures.com/support/faqs/" target="_blank">FAQ</a>.
             </p>
 
             <p>
-                More information about both these changes can be found in this <a href="https://www.primalpictures.com/support/faqs/" target="_blank">FAQ</a>.
-            </p>
-
-            <p>
-                If you’d like to get in touch with us please contact us at 
-                <a href="mailto:clientservices@primalpictures.com" target="_blank">clientservices@primalpictures.com</a>.
+                If you’d like to get in touch with us please contact us at
+                <a href="mailto:clientservices@primalpictures.com"
+                    target="_blank">clientservices@primalpictures.com</a>.
             </p>
         </div>
 
         <div class="controls">
-            <btn class="tickBox setCookie" id="hideWelcome" onclick="setOrDeletePopupCookie(this)">
+            <btn class="tickBox setCookie" id="hide_ie_rip_message" onclick="setOrDeletePopupCookie(this)">
                 <p>
-                    Hide this next time
+                    Got it, don't show this again
                 </p>
             </btn>
         </div>
 
-        <btn class="closeModal" onclick="hidePopup(this)" id="closeModal"></btn>
+        <btn class="closeModal" onclick="hidePopup('popup-iframe')" id="closeModal"></btn>
 </body>
 
 </html>

@@ -4,7 +4,19 @@
 var bannerShown = true,
 	popupShown = true;
 
-var $surveyBanner, $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody;
+var $surveyBanner,
+	$setCookieButtons,
+	$slides,
+	$dots,
+	$dotContainer,
+	$firstSlide,
+	$playPause,
+	$bannerBox,
+	bannerTimer,
+	dotTimer,
+	numBanners,
+	$parentBody;
+
 var bannerHeight = 130,
 	slideIndex = 0,
 	slideSpeed = 1200,
@@ -30,7 +42,6 @@ $(document).ready(function () {
 	// console.log('DR - banner-and-popup.js');
 
 	$parentBody = window.parent.$("body");
-	$popupIframe = $parentBody.find('.popup-iframe');
 
 	if (!bannerShown) {
 		$parentBody.addClass('noBanner');
@@ -39,7 +50,7 @@ $(document).ready(function () {
 	if (popupShown) {
 		if (!$.cookie('hidePopup')) {
 			// console.log('SHOW');
-			showPopup();
+			showPopup('popup-iframe');
 		} else {
 			console.log("DON'T SHOW");
 			// console.log($.cookie('hidePopup'));
@@ -53,6 +64,14 @@ $(document).ready(function () {
 	initialiseIframeRotatingBanner();
 	setIframeBodyClassAccordingToLoginStatus()
 });
+
+function isIE() {
+	const ua = window.navigator.userAgent; //Check the userAgent property of the window.navigator object
+	const msie = ua.indexOf('MSIE '); // IE 10 or older
+	const trident = ua.indexOf('Trident/'); //IE 11
+
+	return (msie > 0 || trident > 0);
+}
 
 
 function setBodyClassForItem() {
@@ -282,12 +301,18 @@ var setOrDeletePopupCookie = function (elem) {
 };
 
 // HIDE WELCOME MODAL
-var hidePopup = function () {
-	$popupIframe.fadeOut(300);
+var hidePopup = function (id) {
+	var idToFind = '#' + id;
+	console.log(idToFind);
+	var $toHide = $parentBody.find(idToFind);
+	$toHide.fadeOut(300);
 };
 
 
 // SHOW WELCOME MODAL
-var showPopup = function () {
-	$popupIframe.fadeIn(300);
+var showPopup = function (id) {
+	var idToFind = '#' + id;
+	console.log(idToFind);
+	var $toShow = $parentBody.find(idToFind);
+	$toShow.fadeIn(300);
 };

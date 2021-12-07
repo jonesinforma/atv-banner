@@ -2,31 +2,50 @@
   font-family: 'Muli';
   font-weight: 300;
   font-style: normal;
-  font-display: fallback;
-  src: url("../../fonts/muli/muli-light.ttf") format("truetype"); }
+  src: url("../../fonts/Muli/Muli-Light.ttf") format("truetype"); }
 @font-face {
   font-family: 'Muli';
   font-weight: 400;
   font-style: normal;
-  font-display: fallback;
-  src: url("../../fonts/muli/muli-regular.ttf") format("truetype"); }
+  src: url("../../fonts/Muli/Muli-Regular.ttf") format("truetype"); }
 @font-face {
   font-family: 'Muli';
   font-weight: 600;
   font-style: normal;
-  font-display: fallback;
-  src: url("../../fonts/muli/muli-semibold.ttf") format("truetype"); }
+  src: url("../../fonts/Muli/Muli-SemiBold.ttf") format("truetype"); }
 @font-face {
   font-family: 'Muli';
   font-weight: 700;
   font-style: normal;
-  font-display: fallback;
-  src: url("../../fonts/muli/muli-bold.ttf") format("truetype"); }
+  src: url("../../fonts/Muli/Muli-Bold.ttf") format("truetype"); }
 @font-face {
   font-family: 'Muli';
   font-weight: 800;
   font-style: normal;
+  src: url("../../fonts/Muli/Muli-Black.ttf") format("truetype"); }
+@font-face {
+  font-family: 'FSMeP';
+  font-weight: 300;
+  font-style: normal;
   font-display: fallback;
-  src: url("../../fonts/muli/muli-black.ttf") format("truetype"); }
+  src: url("../../fonts/fsme-p/fsme-p-light.otf") format("truetype"); }
+@font-face {
+  font-family: 'FSMeP';
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../../fonts/fsme-p/fsme-p.otf") format("truetype"); }
+@font-face {
+  font-family: 'FSMeP';
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../../fonts/fsme-p/fsme-p-bold.otf") format("truetype"); }
+@font-face {
+  font-family: 'FSMeP';
+  font-weight: 800;
+  font-style: normal;
+  font-display: fallback;
+  src: url("../../fonts/fsme-p/fsme-p-black.otf") format("truetype"); }
 
 /*# sourceMappingURL=fonts.css.map */
