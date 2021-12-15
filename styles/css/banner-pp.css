@@ -19,26 +19,6 @@
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Black.otf") format("opentype"); }
 @font-face {
-  font-family: 'FSMeP';
-  font-weight: 300;
-  font-style: normal;
-  src: url("../../fonts/fsme/FSMe-P-Light.woff") format("woff"); }
-@font-face {
-  font-family: 'FSMeP';
-  font-weight: 400;
-  font-style: normal;
-  src: url("../../fonts/fsme/FSMe-P.woff") format("woff"); }
-@font-face {
-  font-family: 'FSMeP';
-  font-weight: 700;
-  font-style: normal;
-  src: url("../../fonts/fsme/FSMe-P-Bold.woff") format("woff"); }
-@font-face {
-  font-family: 'FSMeP';
-  font-weight: 800;
-  font-style: normal;
-  src: url("../../fonts/fsme/FSMe-P-Black.woff") format("woff"); }
-@font-face {
   font-family: 'Muli';
   font-weight: 300;
   font-style: normal;
@@ -362,9 +342,5 @@ span.smallSpace {
   .announcementBanner .surOrSubTitle {
     font-size: 74%;
     line-height: 1.15em; } }
-@media screen and (max-height: 600px) and (orientation: landscape) {
-  .hidden .showHide {
-    height: 40px;
-    background-position: 50% 0; } }
 
-/*# sourceMappingURL=banner-pl.css.map */
+/*# sourceMappingURL=banner-pp.css.map */

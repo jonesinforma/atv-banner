@@ -3,7 +3,7 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = 3;
+	bannerEdition = "21-12-13-01";
 
 var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
@@ -70,14 +70,12 @@ $(document).ready(function () {
 
 			} else {
 
-				// if (window.innerWidth > 767) {
-				// 	slideBannerDown($parentBanner);
-				// }
-
 				// Slide banner down;
 				$parentBanner.css('transition', 'all 0.8s');
 				setTimeout(function () {
+					// if (window.parent.$("body").hasClass('personalProfile')) {
 					$parentBanner.removeClass('initial');
+					// }
 				}, 2000);
 			}
 
