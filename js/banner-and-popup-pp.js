@@ -3,7 +3,7 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "21-12-13-01";
+	bannerEdition = "2022-01-26-01";
 
 var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,

@@ -153,7 +153,8 @@ span.smallSpace {
   .announcementBanner .surOrSubTitle {
     font-size: 79%;
     line-height: 1.25em;
-    font-weight: 400; }
+    font-weight: 400;
+    max-width: 582px; }
 
 .displayIsNone {
   display: none !important; }
