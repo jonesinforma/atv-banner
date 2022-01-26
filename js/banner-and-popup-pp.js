@@ -3,7 +3,7 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "2022-01-26-01";
+	bannerEdition = "2022-01-26-02";
 
 var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
@@ -118,12 +118,26 @@ function showHideBanner(elem) {
 		$bannerBox.removeClass('hidden').addClass('shown');
 	}
 
-	if ($elem.hasClass('gotIt-button')) {
+	// if ($elem.hasClass('gotIt-button')) {
+	// 	if ($bannerBox.hasClass('shown')) {
+	// 		$.removeCookie("bannerHidden" + bannerEdition);
+	// 	} else {
+	// 		$.cookie("bannerHidden" + bannerEdition, "true");
+	// 	}
+	// }
+
+	if ($elem.hasClass('survey')) {
+		setTimeout(function () {
+			window.open("https://informa.co1.qualtrics.com/jfe/form/SV_00uR3Q8rgwoZl6S", "_blank");
+		}, 1000);
+
+
 		if ($bannerBox.hasClass('shown')) {
 			$.removeCookie("bannerHidden" + bannerEdition);
 		} else {
 			$.cookie("bannerHidden" + bannerEdition, "true");
 		}
+
 	}
 }
 

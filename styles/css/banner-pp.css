@@ -65,10 +65,6 @@ span.bold {
 span.smallSpace {
   letter-spacing: -0.1em; }
 
-.showHide {
-  right: calc(0% + 6px);
-  transition: all 0.8s; }
-
 .gotIt-button {
   left: 8px; }
 
@@ -88,22 +84,33 @@ span.smallSpace {
   cursor: pointer;
   height: 28px;
   bottom: 6px; }
+  .announcementBanner button.survey {
+    right: calc(0% + 6px);
+    transition: all 0.8s;
+    background: #39a944;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    font-size: 13px; }
+  .announcementBanner button.showHide {
+    left: calc(0% + 6px);
+    transition: all 0.8s; }
 
-.hidden .showHide {
-  width: 35px;
-  height: 36px;
-  right: calc(50% - 0px);
-  bottom: 0px;
-  border-radius: 0;
-  background: url(../../images/announcement.svg) 50% no-repeat;
-  cursor: pointer;
-  transform: translate(50%, 0px);
-  width: 76px;
-  height: 32px; }
-  .hidden .showHide p {
-    opacity: 0; }
 .hidden .announcementBanner {
   background: #cdd5e4; }
+  .hidden .announcementBanner button.showHide {
+    width: 35px;
+    height: 36px;
+    left: calc(50% - 0px);
+    bottom: 0px;
+    border-radius: 0;
+    background: url(../../images/announcement.svg) 50% no-repeat;
+    cursor: pointer;
+    transform: translate(-50%, 0px);
+    width: 76px;
+    height: 32px; }
+    .hidden .announcementBanner button.showHide p {
+      opacity: 0; }
   .hidden .announcementBanner .bannerImage {
     opacity: 0; }
 
@@ -155,6 +162,8 @@ span.smallSpace {
     line-height: 1.25em;
     font-weight: 400;
     max-width: 582px; }
+    .announcementBanner .surOrSubTitle .standOut {
+      font-weight: 800; }
 
 .displayIsNone {
   display: none !important; }
