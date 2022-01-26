@@ -101,7 +101,8 @@ $(document).ready(function () {
 		// addOnClickToCookieButtons();
 
 		initialiseIframeRotatingBanner();
-		setIframeBodyClassAccordingToLoginStatus()
+		setIframeBodyClassAccordingTo_LoginStatus();
+		setIframeBodyClassAccordingTo_ScreenSize();
 	}
 
 	docReady = true;
@@ -126,7 +127,7 @@ function showHideBanner(elem) {
 	}
 }
 
-function setIframeBodyClassAccordingToLoginStatus() {
+function setIframeBodyClassAccordingTo_LoginStatus() {
 	// console.log('setIframeBodyClassAccordingToLoginStatus');
 
 	if ($.cookie("atvCookie")) {
@@ -137,6 +138,14 @@ function setIframeBodyClassAccordingToLoginStatus() {
 		$('.announcementBanner.leftRight .button-text').removeClass('displayIsNone');
 	}
 }
+
+function setIframeBodyClassAccordingTo_ScreenSize() {
+	// console.log('setIframeBodyClassAccordingTo_ScreenSize');
+	console.log($parentBody.innerHeight(), $parentBody.innerWidth())
+	if ($parentBody.innerHeight() < 600 && $parentBody.innerHeight() < $parentBody.innerWidth()) {
+		$('body').addClass('mobile-landscape');
+	}
+};
 
 function initialiseIframeRotatingBanner() {
 	// console.log('initialiseIframeRotatingBanner');
