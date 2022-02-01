@@ -219,7 +219,7 @@ span {
         max-width: 582px;
 
         .standOut {
-            font-weight: 800;
+            font-weight: 600;
         }
     }
 }
@@ -483,15 +483,17 @@ span {
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 620px) {
     .announcementBanner {
         .mainTitle {
-            font-size: 1em;
+            font-size: 0.9em;
+            padding: 0px 0.6em 0.6em;
         }
 
         .surOrSubTitle {
-            font-size: 74%;
+            font-size: 62%;
             line-height: 1.15em;
+            padding: 0 12px;
         }
     }
 }

@@ -163,7 +163,7 @@ span.smallSpace {
     font-weight: 400;
     max-width: 582px; }
     .announcementBanner .surOrSubTitle .standOut {
-      font-weight: 800; }
+      font-weight: 600; }
 
 .displayIsNone {
   display: none !important; }
@@ -346,11 +346,13 @@ span.smallSpace {
 
   .bannerText {
     font-size: 15px; } }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 620px) {
   .announcementBanner .mainTitle {
-    font-size: 1em; }
+    font-size: 0.9em;
+    padding: 0px 0.6em 0.6em; }
   .announcementBanner .surOrSubTitle {
-    font-size: 74%;
-    line-height: 1.15em; } }
+    font-size: 62%;
+    line-height: 1.15em;
+    padding: 0 12px; } }
 
 /*# sourceMappingURL=banner-pp.css.map */

@@ -3,7 +3,7 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "2022-01-26-02";
+	bannerEdition = "2022-02-01-02";
 
 var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
@@ -112,6 +112,7 @@ function showHideBanner(elem) {
 	var $elem = $(elem);
 	$elem.closest('.banner').toggleClass('hidden').toggleClass('shown');
 	var $bannerBox = window.parent.$("#bannerBox");
+	$bannerBox.find('iframe').css('height', '253px');
 	if ($bannerBox.hasClass('shown')) {
 		$bannerBox.removeClass('shown').addClass('hidden');
 	} else {
