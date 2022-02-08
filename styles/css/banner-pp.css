@@ -129,16 +129,16 @@ span.smallSpace {
   overflow: hidden;
   transition: background-color 0.8s; }
   .announcementBanner a {
-    font-weight: 600;
+    font-weight: 800;
     color: #3f3c4f; }
   .announcementBanner .bannerImage {
-    background: url(../../images/survey.svg) 50% 100%/auto 100% no-repeat;
-    width: 142px;
-    height: 100px;
+    background: #ebeef3 url(../../images/personal_profiles_launch2.png) 50% -18px/auto 98% no-repeat;
+    width: 100%;
+    height: 110px;
     opacity: 1;
-    transition: opacity 0.5s;
     transition-delay: 0.1s;
-    margin: 20px 0 3px; }
+    margin: 14px 0 0px;
+    padding: 4px 0px; }
   .announcementBanner .titlesAndButtons {
     display: flex;
     flex-direction: column;
@@ -154,13 +154,14 @@ span.smallSpace {
       font-weight: 700; }
   .announcementBanner .mainTitle {
     line-height: 1.1em;
-    padding: 0px 0 0.6em;
-    font-size: 1.1em;
-    font-weight: 700; }
+    padding: 0px 0 0.3em;
+    font-size: 1.225em;
+    font-weight: 700;
+    color: #e84e0f; }
   .announcementBanner .surOrSubTitle {
-    font-size: 79%;
+    font-size: 70%;
     line-height: 1.25em;
-    font-weight: 400;
+    font-weight: 600;
     max-width: 582px; }
     .announcementBanner .surOrSubTitle .standOut {
       font-weight: 600; }
