@@ -73,7 +73,7 @@ span.smallSpace {
   border-radius: 16px;
   border: none;
   padding: 1px 12px 0;
-  background: #bdc7db;
+  background: #d1d8e6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,16 +84,11 @@ span.smallSpace {
   cursor: pointer;
   height: 28px;
   bottom: 6px; }
-  .announcementBanner button.survey {
-    right: calc(0% + 6px);
-    transition: all 0.8s;
-    background: #39a944;
-    color: white;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    font-size: 13px; }
-  .announcementBanner button.showHide {
+  .announcementBanner button.gotIt-button {
     left: calc(0% + 6px);
+    transition: all 0.8s; }
+  .announcementBanner button.showHide {
+    right: calc(0% + 6px);
     transition: all 0.8s; }
 
 .hidden .announcementBanner {

@@ -100,7 +100,7 @@ span {
         border-radius: 16px;
         border: none;
         padding: 1px 12px 0;
-        background: #bdc7db;
+        background: #d1d8e6;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -112,18 +112,13 @@ span {
         height: 28px;
         bottom: 6px;
 
-        &.survey {
-            right: calc(0% + 6px);
+        &.gotIt-button {
+            left: calc(0% + 6px);
             transition: all 0.8s;
-            background: #39a944;
-            color: white;
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            font-size: 13px;
         }
 
         &.showHide {
-            left: calc(0% + 6px);
+            right: calc(0% + 6px);
             transition: all 0.8s;
         }
     }

@@ -3,7 +3,7 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "2022-02-01-02";
+	bannerEdition = "2022-02-09-01";
 
 var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
@@ -38,7 +38,11 @@ $(document).ready(function () {
 
 		$popupIframe = $parentBody.find('.popup-iframe');
 
+		$('<style>').text("body.loggedIn.personalProfile .bannerBox{display:none}").appendTo(window.parent.document.head);
+
 		if (bannerExists) {
+
+			console.log($parentBody.attr('class'));
 
 			// Stow banner in menuBar, no transition.
 			if ($.cookie("bannerHidden" + bannerEdition)) {
@@ -110,7 +114,11 @@ $(document).ready(function () {
 
 function showHideBanner(elem) {
 	var $elem = $(elem);
+
+	//style within iframe
 	$elem.closest('.banner').toggleClass('hidden').toggleClass('shown');
+
+	// style of iframe container
 	var $bannerBox = window.parent.$("#bannerBox");
 	$bannerBox.find('iframe').css('height', '253px');
 	if ($bannerBox.hasClass('shown')) {
@@ -119,27 +127,28 @@ function showHideBanner(elem) {
 		$bannerBox.removeClass('hidden').addClass('shown');
 	}
 
-	// if ($elem.hasClass('gotIt-button')) {
-	// 	if ($bannerBox.hasClass('shown')) {
-	// 		$.removeCookie("bannerHidden" + bannerEdition);
-	// 	} else {
-	// 		$.cookie("bannerHidden" + bannerEdition, "true");
-	// 	}
-	// }
-
-	if ($elem.hasClass('survey')) {
-		setTimeout(function () {
-			window.open("https://informa.co1.qualtrics.com/jfe/form/SV_00uR3Q8rgwoZl6S", "_blank");
-		}, 1000);
-
-
+	// add or delete bannerHidden cookie
+	if ($elem.hasClass('gotIt-button')) {
 		if ($bannerBox.hasClass('shown')) {
 			$.removeCookie("bannerHidden" + bannerEdition);
 		} else {
 			$.cookie("bannerHidden" + bannerEdition, "true");
 		}
-
 	}
+
+	// if ($elem.hasClass('survey')) {
+	// 	setTimeout(function () {
+	// 		window.open("https://informa.co1.qualtrics.com/jfe/form/SV_00uR3Q8rgwoZl6S", "_blank");
+	// 	}, 1000);
+
+
+	// 	if ($bannerBox.hasClass('shown')) {
+	// 		$.removeCookie("bannerHidden" + bannerEdition);
+	// 	} else {
+	// 		$.cookie("bannerHidden" + bannerEdition, "true");
+	// 	}
+
+	// }
 }
 
 function setIframeBodyClassAccordingTo_LoginStatus() {
