@@ -42,52 +42,54 @@ $(document).ready(function () {
 
 		if (bannerExists) {
 
-			console.log($parentBody.attr('class'));
+			var hasAccessToPProfiles = $.cookie("hasAccessToPersonalProfiles");
 
-			// Stow banner in menuBar, no transition.
-			if ($.cookie("bannerHidden" + bannerEdition)) {
-				console.log('Banner exists and is hidden');
-
-				$parentBanner.queue(function () {
-					$parentBanner
-						.removeClass('initial')
-						.removeClass('shown')
-						.addClass('hidden');
-					$parentBanner.dequeue();
-				});
-				setTimeout(function () {
-					$parentBanner.css('transition', 'all 0.8s');
-				}, 2000);
-
-
-				$bannerContents.queue(function () {
-					$bannerContents
-						.css('transition', 'all 0s')
-						.removeClass('shown')
-						.addClass('hidden');
-					$bannerContents.dequeue();
-				});
-
-				setTimeout(function () {
-					$bannerContents.css('transition', 'all 0.8s');
-				}, 2000);
+			if (hasAccessToPProfiles === "false") {
+				$parentBody.find('#bannerBox').hide();
 
 			} else {
 
-				// Slide banner down;
-				$parentBanner.css('transition', 'all 0.8s');
-				setTimeout(function () {
-					// if (window.parent.$("body").hasClass('personalProfile')) {
-					$parentBanner.removeClass('initial');
-					// }
-				}, 2000);
+				// Stow banner in menuBar, no transition.
+				if ($.cookie("bannerHidden" + bannerEdition)) {
+					console.log('Banner exists and is hidden');
+
+					$parentBanner.queue(function () {
+						$parentBanner
+							.removeClass('initial')
+							.removeClass('shown')
+							.addClass('hidden');
+						$parentBanner.dequeue();
+					});
+					setTimeout(function () {
+						$parentBanner.css('transition', 'all 0.8s');
+					}, 2000);
+
+
+					$bannerContents.queue(function () {
+						$bannerContents
+							.css('transition', 'all 0s')
+							.removeClass('shown')
+							.addClass('hidden');
+						$bannerContents.dequeue();
+					});
+
+					setTimeout(function () {
+						$bannerContents.css('transition', 'all 0.8s');
+					}, 2000);
+
+				} else {
+
+					// Slide banner down;
+					$parentBanner.css('transition', 'all 0.8s');
+					setTimeout(function () {
+						// if (window.parent.$("body").hasClass('personalProfile')) {
+						$parentBanner.removeClass('initial');
+						// }
+					}, 2000);
+				}
 			}
 
-		} else {
-			// Banner does not exist
-			$parentBody.addClass('noBanner');
 		}
-
 
 
 		if (popupExists) {
