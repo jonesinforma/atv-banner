@@ -134,7 +134,9 @@ function showHideBanner(elem) {
 		if ($bannerBox.hasClass('shown')) {
 			$.removeCookie("bannerHidden" + bannerEdition);
 		} else {
-			$.cookie("bannerHidden" + bannerEdition, "true");
+			$.cookie("bannerHidden" + bannerEdition, "true", {
+				expires: 90
+			});
 		}
 	}
 
