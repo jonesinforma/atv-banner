@@ -3,9 +3,9 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "2022-02-09-01";
+	bannerEdition = "2022-30-09-01";
 
-var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
+var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner, $informaButton;
 var bannerHeight = 130,
 	slideIndex = 0,
 	slideSpeed = 1200,
@@ -34,60 +34,75 @@ $(document).ready(function () {
 
 		$parentBody = window.parent.$("body");
 		$parentBanner = window.parent.$(".bannerBox");
+		var $informaButton = window.parent.$("#iribbon-title");
 		$bannerContents = $('.banner');
+		$bannerAnchors = $bannerContents.find('a');
+		$bannerButtons = $bannerContents.find('buttons');
+		$bannerShowHide = $bannerContents.find('.showHide');
 
 		$popupIframe = $parentBody.find('.popup-iframe');
 
-		$('<style>').text("body.loggedIn.personalProfile .bannerBox{display:none}").appendTo(window.parent.document.head);
+		$('<style>').text(".bannerBox.shown{height: 262px}").appendTo(window.parent.document.head);
+
+		// HIDE BANNER WHEN LOGGED IN AS CHILD:
+		//$('<style>').text("body.loggedIn.personalProfile .bannerBox{display:none}").appendTo(window.parent.document.head);
 
 		if (bannerExists) {
 
-			var hasAccessToPProfiles = $.cookie("hasAccessToPersonalProfiles");
+			//HIDE BANNER IF NO ACCESS TO PPROFILES:
 
-			if (hasAccessToPProfiles === "false") {
-				$parentBody.find('#bannerBox').hide();
+			// var hasAccessToPProfiles = $.cookie("hasAccessToPersonalProfiles");
+			// if (hasAccessToPProfiles === "false") {
+			// 	$parentBody.find('#bannerBox').hide();
+
+			// } else {
+			//
+
+			// Stow banner in menuBar, no transition.
+			if ($.cookie("bannerHidden" + bannerEdition)) {
+				console.log('Banner exists and is hidden');
+
+				$parentBanner.queue(function () {
+					$parentBanner
+						.removeClass('initial')
+						.removeClass('shown')
+						.addClass('hidden');
+					$parentBanner.dequeue();
+				});
+				setTimeout(function () {
+					$parentBanner.css('transition', 'all 0.8s');
+				}, 2000);
+
+
+				$bannerContents.queue(function () {
+					$bannerContents
+						.css('transition', 'all 0s')
+						.removeClass('shown')
+						.addClass('hidden')
+					$bannerContents.dequeue();
+				});
+
+				$bannerAnchors.attr('tabindex', -1);
+				$bannerButtons.attr('tabindex', -1);
+				$bannerShowHide.attr('tabindex', 0);
+
+				setTimeout(function () {
+					$bannerContents.css('transition', 'all 0.8s');
+				}, 2000);
 
 			} else {
 
-				// Stow banner in menuBar, no transition.
-				if ($.cookie("bannerHidden" + bannerEdition)) {
-					console.log('Banner exists and is hidden');
-
-					$parentBanner.queue(function () {
-						$parentBanner
-							.removeClass('initial')
-							.removeClass('shown')
-							.addClass('hidden');
-						$parentBanner.dequeue();
-					});
-					setTimeout(function () {
-						$parentBanner.css('transition', 'all 0.8s');
-					}, 2000);
-
-
-					$bannerContents.queue(function () {
-						$bannerContents
-							.css('transition', 'all 0s')
-							.removeClass('shown')
-							.addClass('hidden');
-						$bannerContents.dequeue();
-					});
-
-					setTimeout(function () {
-						$bannerContents.css('transition', 'all 0.8s');
-					}, 2000);
-
-				} else {
-
-					// Slide banner down;
-					$parentBanner.css('transition', 'all 0.8s');
-					setTimeout(function () {
-						// if (window.parent.$("body").hasClass('personalProfile')) {
-						$parentBanner.removeClass('initial');
-						// }
-					}, 2000);
-				}
+				// Slide banner down;
+				$parentBanner.css('transition', 'all 0.8s');
+				setTimeout(function () {
+					// if (window.parent.$("body").hasClass('personalProfile')) {
+					$parentBanner.removeClass('initial');
+					$informaButton.attr('tabindex', -1);
+					// }
+				}, 2000);
 			}
+
+			// }
 
 		}
 
@@ -118,15 +133,26 @@ function showHideBanner(elem) {
 	var $elem = $(elem);
 
 	//style within iframe
-	$elem.closest('.banner').toggleClass('hidden').toggleClass('shown');
+	$bannerContents = $elem.closest('.banner');
+	$bannerContents.toggleClass('hidden').toggleClass('shown');
+	$bannerAnchors = $bannerContents.find('a');
+	$bannerButtons = $bannerContents.find('buttons');
 
 	// style of iframe container
 	var $bannerBox = window.parent.$("#bannerBox");
-	$bannerBox.find('iframe').css('height', '253px');
+	var $bannerIframe = $bannerBox.find('iframe');
+	var $informaButton = window.parent.$("#iribbon-title");
+	$bannerIframe.css('height', '262px');
 	if ($bannerBox.hasClass('shown')) {
 		$bannerBox.removeClass('shown').addClass('hidden');
+		$bannerIframe.attr('tabindex', -1);
+		$informaButton.attr('tabindex', 0);
 	} else {
 		$bannerBox.removeClass('hidden').addClass('shown');
+		$bannerIframe.attr('tabindex', 0);
+		$bannerAnchors.attr('tabindex', 0);
+		$bannerButtons.attr('tabindex', 0);
+		$informaButton.attr('tabindex', -1);
 	}
 
 	// add or delete bannerHidden cookie

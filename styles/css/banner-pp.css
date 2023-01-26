@@ -115,7 +115,6 @@ span.smallSpace {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
   text-align: left;
   background: #ebeef3;
   font-weight: 300;
@@ -129,39 +128,44 @@ span.smallSpace {
     font-weight: 800;
     color: #3f3c4f; }
   .announcementBanner .bannerImage {
-    height: 110px;
-    margin: -4px 0 24px 8px;
-    transition: opacity 0.6s;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
+    height: 244px;
+    width: 360px;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
     .announcementBanner .bannerImage img {
-      height: 110%;
+      height: 100%;
       width: auto; }
   .announcementBanner .titlesAndButtons {
-    display: flex;
-    flex-direction: column;
+    flex: 1;
+    position: relative;
+    width: 100%;
+    max-width: 620px;
     box-sizing: border-box;
-    justify-content: center; }
+    padding: 40px 20px 0;
+    display: flex;
+    flex-direction: column; }
   .announcementBanner .titles {
     box-sizing: border-box;
     line-height: 1.15em;
-    text-align: center;
     font-weight: 600;
     color: #3f3c4f; }
     .announcementBanner .titles strong {
       font-weight: 700; }
   .announcementBanner .mainTitle {
     line-height: 1.1em;
-    padding: 0px 0 0.3em;
-    font-size: 1.225em;
+    padding: 0px 0 0.5em;
+    font-size: 1.3em;
     font-weight: 700;
     color: #e84e0f; }
   .announcementBanner .surOrSubTitle {
-    font-size: 70%;
-    line-height: 1.25em;
-    font-weight: 600;
-    max-width: 582px; }
+    font-size: 73%;
+    margin-bottom: 0.8em;
+    font-weight: 400;
+    line-height: 1.1em;
+    max-width: 332px; }
+    .announcementBanner .surOrSubTitle.small {
+      font-size: 64%; }
     .announcementBanner .surOrSubTitle .standOut {
       font-weight: 600; }
 
@@ -346,18 +350,31 @@ span.smallSpace {
 
   .bannerText {
     font-size: 15px; } }
+@media screen and (max-width: 600px) {
+  .announcementBanner .bannerImage {
+    height: 200px;
+    right: 20px;
+    width: 295px; } }
 @media screen and (max-width: 540px) {
-  .announcementBanner .titles {
-    padding: 0 12px; }
+  .announcementBanner .titlesAndButtons {
+    padding-top: 28px; }
   .announcementBanner .mainTitle {
-    font-size: 1.1em;
-    padding: 0px 0.6em 0.6em; }
+    font-size: 1.15em; }
   .announcementBanner .surOrSubTitle {
     font-size: 62%;
     line-height: 1.15em;
-    padding: 0 12px; }
+    padding: 0 124px 0 0;
+    max-width: unset; }
   .announcementBanner .bannerImage {
-    height: 80px;
-    margin-bottom: 40px; } }
+    right: 0;
+    transform: translateX(44px) rotate(-46deg);
+    height: 200px;
+    bottom: -8px; } }
+@media screen and (max-width: 500px) {
+  .announcementBanner .bannerImage {
+    bottom: -44px; } }
+@media screen and (max-width: 420px) {
+  .announcementBanner .mainTitle {
+    font-size: 0.95em; } }
 
 /*# sourceMappingURL=banner-pp.css.map */
