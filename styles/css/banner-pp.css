@@ -1,67 +1,79 @@
 @font-face {
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 300;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Light.otf") format("opentype"); }
+
 @font-face {
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 400;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P.otf") format("opentype"); }
+
 @font-face {
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 700;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Bold.otf") format("opentype"); }
+
 @font-face {
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 800;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Black.otf") format("opentype"); }
+
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 300;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-light.ttf") format("truetype"); }
+
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-regular.ttf") format("truetype"); }
+
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-semibold.ttf") format("truetype"); }
+
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 700;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-bold.ttf") format("truetype"); }
+
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 800;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-black.ttf") format("truetype"); }
+
 body {
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
   background: lightcoral;
-  font-family: 'FSMeP', Verdana, sans-serif; }
+  font-family: "FSMeP", Verdana, sans-serif; }
 
 span.avoidwrap {
   display: inline-block; }
+
 span.semibold {
   font-weight: 700; }
+
 span.bold {
   font-weight: 800; }
+
 span.smallSpace {
   letter-spacing: -0.1em; }
 
@@ -78,7 +90,7 @@ span.smallSpace {
   justify-content: center;
   align-items: center;
   font-size: 0.6em;
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 700;
   color: #14121a;
   cursor: pointer;
@@ -129,14 +141,14 @@ span.smallSpace {
     font-weight: 800;
     color: #3f3c4f; }
   .announcementBanner .bannerImage {
-    height: 110px;
-    margin: -4px 0 24px 8px;
+    margin: 10px 0 -16px 28px;
+    height: auto;
     transition: opacity 0.6s;
     display: flex;
     flex-direction: column;
     align-items: center; }
     .announcementBanner .bannerImage img {
-      height: 110%;
+      height: 131px;
       width: auto; }
   .announcementBanner .titlesAndButtons {
     display: flex;
@@ -144,6 +156,10 @@ span.smallSpace {
     box-sizing: border-box;
     justify-content: center; }
   .announcementBanner .titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 32px;
     box-sizing: border-box;
     line-height: 1.15em;
     text-align: center;
@@ -152,15 +168,15 @@ span.smallSpace {
     .announcementBanner .titles strong {
       font-weight: 700; }
   .announcementBanner .mainTitle {
-    line-height: 1.1em;
-    padding: 0px 0 0.3em;
-    font-size: 1.225em;
+    line-height: 1.15em;
+    font-size: 0.8em;
+    padding: 0px 0 0.8em;
     font-weight: 700;
     color: #e84e0f; }
   .announcementBanner .surOrSubTitle {
-    font-size: 70%;
     line-height: 1.25em;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 0.65em;
     max-width: 582px; }
     .announcementBanner .surOrSubTitle .standOut {
       font-weight: 600; }
@@ -236,6 +252,7 @@ span.smallSpace {
   .logged-in .for-LoginPage .button-text {
     margin-bottom: 6px;
     padding: 5px 14px 6px; }
+
 .logged-in .announcementBanner span.button-text {
   border-bottom: 2px dotted rgba(255, 255, 255, 0.5);
   cursor: pointer; }
@@ -247,11 +264,9 @@ span.smallSpace {
 @media screen and (max-width: 767px) and (orientation: portrait) {
   .shyBreak {
     display: block; }
-
   .bannerInnerBox {
     width: 100vw;
     display: flex; }
-
   .announcementBanner {
     height: 100%;
     width: 100vw;
@@ -299,7 +314,6 @@ span.smallSpace {
       padding: 5px 14px 6px; }
     .announcementBanner.atvWelcome .bannerRight .titlesAndButtons {
       padding: 10px 10px 150px 10px; }
-
   .continueBtn {
     display: inline-block; }
     .continueBtn p {
@@ -308,7 +322,6 @@ span.smallSpace {
       padding: 0;
       font-weight: 600;
       letter-spacing: -0.02em; }
-
   .dotContainer {
     bottom: 70px;
     flex-direction: row;
@@ -319,7 +332,6 @@ span.smallSpace {
     .dotContainer .dot.active {
       width: 14px;
       height: 14px; }
-
   .playPause {
     right: unset;
     bottom: 75px;
@@ -327,37 +339,34 @@ span.smallSpace {
     left: 50vw;
     transform: translateX(-50%);
     margin: 0 0 0 1px; }
-
   .logged-out .for-Mobile {
     display: inline !important; }
-
   .logged-out .for-Desktop,
   .logged-in .for-Desktop {
     display: none !important; }
-
   span.keepOnOneLine {
     display: block; }
-
   .messageBox {
     padding: 25px 30px 60px 30px; }
-
   .mainTitle {
     font-size: 26px; }
-
   .bannerText {
     font-size: 15px; } }
-@media screen and (max-width: 540px) {
-  .announcementBanner .titles {
-    padding: 0 12px; }
-  .announcementBanner .mainTitle {
-    font-size: 1.1em;
-    padding: 0px 0.6em 0.6em; }
-  .announcementBanner .surOrSubTitle {
-    font-size: 62%;
-    line-height: 1.15em;
-    padding: 0 12px; }
-  .announcementBanner .bannerImage {
-    height: 80px;
-    margin-bottom: 40px; } }
 
-/*# sourceMappingURL=banner-pp.css.map */
+@media screen and (max-width: 640px) {
+  .announcementBanner .titles {
+    padding: 0 16px; }
+  .announcementBanner .mainTitle {
+    font-size: 0.675em;
+    padding: 0px 0 1em; }
+  .announcementBanner .surOrSubTitle {
+    font-size: 0.55em; }
+  .announcementBanner .bannerImage {
+    margin: 4px 0 12px 0; }
+  .announcementBanner .bannerImage img {
+    height: 96px; }
+  .announcementBanner button {
+    font-size: 0.5em;
+    height: 24px; }
+  .announcementBanner span.avoidwrap {
+    display: inline; } }

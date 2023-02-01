@@ -3,7 +3,7 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "2022-02-09-01";
+	bannerEdition = "2023-02-01-06";
 
 var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
 		$popupIframe = $parentBody.find('.popup-iframe');
 
-		$('<style>').text("body.loggedIn.personalProfile .bannerBox{display:none}").appendTo(window.parent.document.head);
+		$('<style>').text(".welcomer .bannerBox, .titles .bannerBox, .learn .bannerBox, .browse .bannerBox, .index .bannerBox, .search .bannerBox {display:flex}").appendTo(window.parent.document.head);
 
 		if (bannerExists) {
 
