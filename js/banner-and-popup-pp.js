@@ -3,7 +3,7 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "2022-02-09-01";
+	bannerEdition = "2023-01-27-03";
 
 var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
@@ -41,6 +41,8 @@ $(document).ready(function () {
 		$('<style>').text("body.loggedIn.personalProfile .bannerBox{display:none}").appendTo(window.parent.document.head);
 
 		if (bannerExists) {
+
+			$parentBanner.find('iframe').css('height', '253px');
 
 			var hasAccessToPProfiles = $.cookie("hasAccessToPersonalProfiles");
 
