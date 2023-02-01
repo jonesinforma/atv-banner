@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>ATV banner</title>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- <link rel="preload" href="/fonts/muli/muli-light.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/fonts/muli/muli-regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/fonts/muli/muli-semibold.ttf" as="font" type="font/ttf" crossorigin> -->
 
-    <link rel="stylesheet" href="styles/css/banner-pp.css?2022-02-09-01">
+    <link rel="stylesheet" href="styles/css/banner-pp.css?2023-02-01-06" />
 
     <script src="scripts/jquery-1.8.3.min.js"></script>
     <script src="scripts/jquery.cookie.js"></script>
-    <script src="js/banner-and-popup-pp.js?2022-03-30-01"></script>
+    <script src="js/banner-and-popup-pp.js?2023-02-01-06"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script> -->
 
     <!-- <script>
@@ -37,42 +39,51 @@
             fontinactive: function (familyName, fvd) {}
         };
     </script> -->
-</head>
+  </head>
 
-<body class="banner shown">
+  <body class="banner shown">
     <div class="announcementBanner">
-        <div class="titlesAndButtons">
-            <div class="titles">
+      <div class="titlesAndButtons">
+        <div class="titles">
+          <div class="mainTitle">
+            On Thursday 9th February
+            <span class="avoidwrap"
+              >Anatomy.tv will be down from 9am UK time for approximately
+              1&nbsp;hour</span
+            >
+            <span class="avoidwrap"
+              >as we work on bringing an exciting new product and
+              enhancements.</span
+            >
+          </div>
 
-                <div class="mainTitle">
-                    Personal Profiles have launched!
-                </div>
-
-                <div class="surOrSubTitle small">
-                    <span class="avoidwrap">Find more information
-                        <a href="https://www.primalpictures.com/news/personal-profiles/" target="_blank">here</a></span>
-                    <span class="avoidwrap">or if you have any questions,</span>
-                    <span class="avoidwrap">please get in
-                        touch with us <a href="https://www.primalpictures.com/contact/" target="_blank">here</a>.</span>
-                </div>
-            </div>
+          <div class="surOrSubTitle small">
+            <span class="avoidwrap"
+              >We apologize in advance for any inconvenience caused. If you
+              still can't access Anatomy.tv after this time or have any
+              questions, please get in touch
+              <a href="https://www.primalpictures.com/contact/" target="_blank"
+                >here</a
+              >.
+            </span>
+          </div>
         </div>
-        <div class="bannerImage">
-            <img src="images/personal_profiles_launch2.png" />
-        </div>
-        <button class="showHide" title="Hide announcement banner" onclick="showHideBanner(this);">
-            <p>
-                Hide
-            </p>
-        </button>
-        <button class="gotIt-button" onclick="showHideBanner(this)">
-            <p>
-                Don't show again
-            </p>
-        </button>
+      </div>
+      <div class="bannerImage">
+        <img src="images/maintenance_lom2.jpg" />
+      </div>
+      <button
+        class="showHide"
+        title="Hide announcement banner"
+        onclick="showHideBanner(this);"
+      >
+        <p>Hide</p>
+      </button>
+      <button class="gotIt-button" onclick="showHideBanner(this)">
+        <p>Don't show again</p>
+      </button>
     </div>
     <div class="dotContainer displayIsNone"></div>
     <div class="playPause displayIsNone" title="Play / Pause banner"></div>
-</body>
-
+  </body>
 </html>
