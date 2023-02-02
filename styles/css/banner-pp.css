@@ -173,6 +173,9 @@ span.smallSpace {
     padding: 0px 0 0.8em;
     font-weight: 700;
     color: #e84e0f; }
+    .announcementBanner .mainTitle em {
+      font-style: normal;
+      text-decoration: underline; }
   .announcementBanner .surOrSubTitle {
     line-height: 1.25em;
     font-weight: 400;
