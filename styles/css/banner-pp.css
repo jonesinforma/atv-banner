@@ -1,57 +1,57 @@
 @font-face {
-  font-family: "FSMeP";
+  font-family: 'FSMeP';
   font-weight: 300;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Light.otf") format("opentype"); }
 
 @font-face {
-  font-family: "FSMeP";
+  font-family: 'FSMeP';
   font-weight: 400;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P.otf") format("opentype"); }
 
 @font-face {
-  font-family: "FSMeP";
+  font-family: 'FSMeP';
   font-weight: 700;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Bold.otf") format("opentype"); }
 
 @font-face {
-  font-family: "FSMeP";
+  font-family: 'FSMeP';
   font-weight: 800;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Black.otf") format("opentype"); }
 
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 300;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-light.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-semibold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 700;
   font-style: normal;
   font-display: fallback;
   src: url("../../fonts/muli/muli-bold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Muli";
+  font-family: 'Muli';
   font-weight: 800;
   font-style: normal;
   font-display: fallback;
@@ -63,7 +63,7 @@ body {
   margin: 0;
   padding: 0;
   background: lightcoral;
-  font-family: "FSMeP", Verdana, sans-serif; }
+  font-family: 'FSMeP', Verdana, sans-serif; }
 
 span.avoidwrap {
   display: inline-block; }
@@ -174,7 +174,7 @@ span.smallSpace {
     justify-content: center;
     align-items: center;
     font-size: 0.6em;
-    font-family: "FSMeP";
+    font-family: 'FSMeP';
     color: #14121a;
     cursor: pointer;
     height: 24px;
@@ -378,3 +378,7 @@ span.smallSpace {
     font-size: 55%; }
   .announcementBanner .linkContainer {
     font-size: 55%; } }
+
+@media screen and (min-height: 35px) {
+  .hidden .announcementBanner button.showHide {
+    height: 40px; } }

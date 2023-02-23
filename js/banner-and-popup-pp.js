@@ -3,7 +3,7 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "2023-02-06-03";
+	bannerEdition = "2023-02-22-03";
 
 var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
@@ -38,11 +38,11 @@ $(document).ready(function () {
 
 		$popupIframe = $parentBody.find('.popup-iframe');
 
-		$('<style>').text("body.loggedIn.personalProfile .bannerBox{display:none}").appendTo(window.parent.document.head);
+		// $('<style>').text("body.loggedIn.personalProfile .bannerBox{display:none}").appendTo(window.parent.document.head);
 
 		if (bannerExists) {
 
-			$parentBanner.find('iframe').css('height', '253px');
+			$parentBanner.find('iframe').css('height', '100%');
 
 			var hasAccessToPProfiles = $.cookie("hasAccessToPersonalProfiles");
 
@@ -124,7 +124,7 @@ function showHideBanner(elem) {
 
 	// style of iframe container
 	var $bannerBox = window.parent.$("#bannerBox");
-	$bannerBox.find('iframe').css('height', '253px');
+	// $bannerBox.find('iframe').css('height', '253px');
 	if ($bannerBox.hasClass('shown')) {
 		$bannerBox.removeClass('shown').addClass('hidden');
 	} else {
