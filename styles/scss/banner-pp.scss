@@ -98,6 +98,10 @@ span {
   .announcementBanner {
     background: #cdd5e4;
 
+    .titlesAndButtons {
+      opacity: 0;
+    }
+
     button.showHide {
       right: calc(50% - 0px);
       bottom: 0px;
@@ -163,6 +167,7 @@ span {
     flex-direction: column;
     box-sizing: border-box;
     justify-content: center;
+    transition: opacity 0.8s;
   }
 
   .titles {
