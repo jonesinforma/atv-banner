@@ -99,8 +99,6 @@ span {
     background: #cdd5e4;
 
     button.showHide {
-      width: 35px;
-      height: 36px;
       right: calc(50% - 0px);
       bottom: 0px;
       border-radius: 0;
@@ -109,7 +107,12 @@ span {
       width: 76px;
       height: 32px;
       background-color: #ccd5e3;
-      background-position: 50% 5px;
+      background-position: 50% 0px;
+
+      &.tall {
+        height: 40px;
+        background-position: 50% 5px;
+      }
 
       p {
         opacity: 0;
@@ -535,14 +538,5 @@ span {
     .linkContainer {
       font-size: 55%;
     }
-  }
-}
-
-/// RULES FOR HEIGHT + WIDTH
-
-@media screen and (max-height: 39px) {
-  .hidden .announcementBanner button.showHide {
-    height: 32px;
-    background-position: 50% 50%;
   }
 }

@@ -83,8 +83,6 @@ span.smallSpace {
 .hidden .announcementBanner {
   background: #cdd5e4; }
   .hidden .announcementBanner button.showHide {
-    width: 35px;
-    height: 36px;
     right: calc(50% - 0px);
     bottom: 0px;
     border-radius: 0;
@@ -93,7 +91,10 @@ span.smallSpace {
     width: 76px;
     height: 32px;
     background-color: #ccd5e3;
-    background-position-x: 50%; }
+    background-position: 50% 0px; }
+    .hidden .announcementBanner button.showHide.tall {
+      height: 40px;
+      background-position: 50% 5px; }
     .hidden .announcementBanner button.showHide p {
       opacity: 0; }
   .hidden .announcementBanner .bannerImage {
@@ -378,7 +379,3 @@ span.smallSpace {
     font-size: 55%; }
   .announcementBanner .linkContainer {
     font-size: 55%; } }
-
-@media screen and (min-height: 35px) {
-  .hidden .announcementBanner button.showHide {
-    height: 40px; } }

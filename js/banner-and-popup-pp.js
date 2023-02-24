@@ -3,9 +3,9 @@
 
 var bannerExists = true,
 	popupExists = false,
-	bannerEdition = "2023-02-22-03";
+	bannerEdition = "2023-02-23-08";
 
-var $setCookieButtons, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
+var $setCookieButtons, $showHide, $slides, $dots, $dotContainer, $firstSlide, $playPause, $bannerBox, bannerTimer, dotTimer, numBanners, $parentBody, $popupIframe, $parentBanner;
 var bannerHeight = 130,
 	slideIndex = 0,
 	slideSpeed = 1200,
@@ -35,10 +35,13 @@ $(document).ready(function () {
 		$parentBody = window.parent.$("body");
 		$parentBanner = window.parent.$(".bannerBox");
 		$bannerContents = $('.banner');
+		$showHide = $(".showHide");
 
 		$popupIframe = $parentBody.find('.popup-iframe');
 
 		// $('<style>').text("body.loggedIn.personalProfile .bannerBox{display:none}").appendTo(window.parent.document.head);
+
+		resizeButton();
 
 		if (bannerExists) {
 
@@ -69,15 +72,10 @@ $(document).ready(function () {
 
 					$bannerContents.queue(function () {
 						$bannerContents
-							.css('transition', 'all 0s')
 							.removeClass('shown')
 							.addClass('hidden');
 						$bannerContents.dequeue();
 					});
-
-					setTimeout(function () {
-						$bannerContents.css('transition', 'all 0.8s');
-					}, 2000);
 
 				} else {
 
@@ -155,6 +153,37 @@ function showHideBanner(elem) {
 	// 	}
 
 	// }
+}
+
+var resizeTimer = false;
+
+$(window.parent).on('resize', function(e) {
+
+  if( !resizeTimer ) {
+	$(window).trigger('resizestart');  	
+  }
+
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+
+	resizeTimer = false;
+	$(window).trigger('resizeend');
+            
+  }, 250);
+
+}).on('resizestart', function(){
+	// console.log('Started resizing the window');
+}).on('resizeend', function(){
+	// console.log('Ended resizing the window');
+	resizeButton();
+});
+
+function resizeButton() {
+	if ($parentBody.outerHeight() <= 640) {
+		$showHide.addClass("tall");
+	} else {
+		$showHide.removeClass("tall");
+	}
 }
 
 function setIframeBodyClassAccordingTo_LoginStatus() {
