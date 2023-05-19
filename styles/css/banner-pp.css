@@ -148,7 +148,7 @@ span.smallSpace {
     flex-direction: column;
     align-items: center; }
     .announcementBanner .bannerImage img {
-      height: 131px;
+      height: 132px;
       width: auto; }
   .announcementBanner .titlesAndButtons {
     display: flex;
@@ -169,7 +169,7 @@ span.smallSpace {
       font-weight: 700; }
   .announcementBanner .mainTitle {
     line-height: 1.15em;
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 0px 0 0.8em;
     font-weight: 700;
     color: #e84e0f; }
