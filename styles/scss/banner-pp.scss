@@ -1,66 +1,66 @@
 @font-face {
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 300;
   font-style: normal;
-  src: url('../../fonts/fsme/FSMe-P-Light.otf') format('opentype');
+  src: url("../../fonts/fsme/FSMe-P-Light.otf") format("opentype");
 }
 @font-face {
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 400;
   font-style: normal;
-  src: url('../../fonts/fsme/FSMe-P.otf') format('opentype');
+  src: url("../../fonts/fsme/FSMe-P.otf") format("opentype");
 }
 @font-face {
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 700;
   font-style: normal;
-  src: url('../../fonts/fsme/FSMe-P-Bold.otf') format('opentype');
+  src: url("../../fonts/fsme/FSMe-P-Bold.otf") format("opentype");
 }
 @font-face {
-  font-family: 'FSMeP';
+  font-family: "FSMeP";
   font-weight: 800;
   font-style: normal;
-  src: url('../../fonts/fsme/FSMe-P-Black.otf') format('opentype');
+  src: url("../../fonts/fsme/FSMe-P-Black.otf") format("opentype");
 }
 
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 300;
   font-style: normal;
   font-display: fallback;
-  src: url('../../fonts/muli/muli-light.ttf') format('truetype');
+  src: url("../../fonts/muli/muli-light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-  src: url('../../fonts/muli/muli-regular.ttf') format('truetype');
+  src: url("../../fonts/muli/muli-regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 600;
   font-style: normal;
   font-display: fallback;
-  src: url('../../fonts/muli/muli-semibold.ttf') format('truetype');
+  src: url("../../fonts/muli/muli-semibold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 700;
   font-style: normal;
   font-display: fallback;
-  src: url('../../fonts/muli/muli-bold.ttf') format('truetype');
+  src: url("../../fonts/muli/muli-bold.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Muli';
+  font-family: "Muli";
   font-weight: 800;
   font-style: normal;
   font-display: fallback;
-  src: url('../../fonts/muli/muli-black.ttf') format('truetype');
+  src: url("../../fonts/muli/muli-black.ttf") format("truetype");
 }
 
 body {
@@ -69,7 +69,7 @@ body {
   margin: 0;
   padding: 0;
   background: lightcoral;
-  font-family: 'FSMeP', Verdana, sans-serif;
+  font-family: "FSMeP", Verdana, sans-serif;
 }
 
 span {
@@ -172,7 +172,7 @@ span {
 
   .titles {
     text-align: left;
-    padding: 0 42px 32px 32px;
+    padding: 0 28px 8px 28px;
     box-sizing: border-box;
     line-height: 1.15em;
     font-weight: 600;
@@ -185,7 +185,7 @@ span {
   }
 
   .mainTitle {
-    font-size: 0.8em;
+    font-size: 0.7em;
     line-height: 1em;
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -202,7 +202,7 @@ span {
     letter-spacing: -0.02em;
 
     &.smaller {
-      font-size: 62%;
+      font-size: 63%;
       letter-spacing: unset;
     }
 
@@ -230,7 +230,7 @@ span {
     justify-content: center;
     align-items: center;
     font-size: 0.6em;
-    font-family: 'FSMeP';
+    font-family: "FSMeP";
     color: #14121a;
     cursor: pointer;
     height: 24px;
