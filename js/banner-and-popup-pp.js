@@ -1,7 +1,7 @@
 /* jshint browser: true, devel: true */
 /* global $, console, f, g */
 
-var bannerExists = true,
+var bannerExists = false,
   popupExists = false,
   bannerEdition = "2023-05-30-03";
 
