@@ -85,7 +85,8 @@ span.smallSpace {
   .hidden .announcementBanner .titlesAndButtons {
     opacity: 0; }
   .hidden .announcementBanner button.showHide {
-    right: calc(50% - 0px);
+    background-position: 50% 0px;
+    right: 50%;
     bottom: 0px;
     border-radius: 0;
     cursor: pointer;
@@ -104,7 +105,7 @@ span.smallSpace {
 
 .announcementBanner {
   display: grid;
-  grid-template: auto / auto 257px;
+  grid-template: auto / auto 220px;
   text-align: left;
   background: #ebeef3;
   font-weight: 300;
@@ -136,24 +137,21 @@ span.smallSpace {
     transition: opacity 0.8s; }
   .announcementBanner .titles {
     text-align: left;
-    padding: 0 28px 8px 28px;
+    padding: 0 44px 28px 42px;
     box-sizing: border-box;
-    line-height: 1.15em;
-    font-weight: 600;
-    color: #3f3c4f;
-    max-width: 468px; }
+    color: #3f3c4f; }
     .announcementBanner .titles strong {
       font-weight: 800; }
   .announcementBanner .mainTitle {
-    font-size: 0.7em;
-    line-height: 1em;
+    font-size: 0.9em;
+    line-height: 1.1em;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    padding: 0px 0 0.8em;
+    padding: 0px 0 0.7em;
     font-weight: 800;
-    color: #e84e0f; }
+    color: #6a961a; }
   .announcementBanner .surOrSubTitle {
-    font-size: 96%;
+    font-size: 100%;
     padding-bottom: 0.6em;
     font-weight: 400;
     line-height: 1.1em;
@@ -164,10 +162,7 @@ span.smallSpace {
     .announcementBanner .surOrSubTitle .standOut {
       font-weight: 600; }
   .announcementBanner .linkContainer {
-    font-size: 64%; }
-    .announcementBanner .linkContainer span {
-      margin: 0 0.2em;
-      font-size: 86%; }
+    font-size: 56%; }
   .announcementBanner button {
     position: absolute;
     border-radius: 16px;
@@ -187,7 +182,8 @@ span.smallSpace {
       left: calc(0% + 6px);
       transition: all 0.8s; }
     .announcementBanner button.showHide {
-      right: 262px;
+      right: 0;
+      transform: translate(-226px, 0);
       transition: all 0.8s;
       background: #cad2e2 url(../../images/announcement.svg) 280px 50% no-repeat; }
 
@@ -369,7 +365,7 @@ span.smallSpace {
     .announcementBanner .bannerImage {
       display: none; }
     .announcementBanner button.showHide {
-      right: 6px; }
+      transform: translate(-6px, 0); }
     .announcementBanner .titles {
       padding: 0 12px 32px 20px; } }
 

@@ -3,7 +3,7 @@
 
 var bannerExists = true,
   popupExists = false,
-  bannerEdition = "2023-05-30-03";
+  bannerEdition = "2023-06-29-01";
 
 var $setCookieButtons,
   $showHide,
