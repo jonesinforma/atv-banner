@@ -4,18 +4,21 @@
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Light.otf") format("opentype");
 }
+
 @font-face {
   font-family: "FSMeP";
   font-weight: 400;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P.otf") format("opentype");
 }
+
 @font-face {
   font-family: "FSMeP";
   font-weight: 700;
   font-style: normal;
   src: url("../../fonts/fsme/FSMe-P-Bold.otf") format("opentype");
 }
+
 @font-face {
   font-family: "FSMeP";
   font-weight: 800;
@@ -174,7 +177,7 @@ span {
   }
 
   .bannerImage {
-    margin: 10px 0 -16px 28px;
+    margin: 4px 0 -12px 28px;
     height: auto;
     transition: opacity 0.6s;
     display: flex;
@@ -212,7 +215,7 @@ span {
 
   .mainTitle {
     line-height: 1.15em;
-    font-size: 0.95em;
+    font-size: 0.8em;
     padding: 0px 0 0.8em;
     font-weight: 700;
     color: #e84e0f;
@@ -361,12 +364,12 @@ span {
       top: 0;
       line-height: 1.25em;
 
-      > div {
+      >div {
         position: relative;
         top: 20%;
       }
 
-      &.spaced > * {
+      &.spaced>* {
         margin-bottom: 1.2em;
         line-height: 1.2em;
       }

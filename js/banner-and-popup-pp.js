@@ -3,7 +3,7 @@
 
 var bannerExists = true,
   popupExists = false,
-  bannerEdition = "2023-05-17-01";
+  bannerEdition = '2023-11-22-02';
 
 var $setCookieButtons,
   $slides,
@@ -40,58 +40,58 @@ var bannerHeight = 130,
 
 $(document).ready(function () {
   if (!docReady) {
-    console.log("DR - PL banner-and-popup.js");
+    console.log('DR - PL banner-and-popup.js');
 
-    $parentBody = window.parent.$("body");
-    $parentBanner = window.parent.$(".bannerBox");
-    $bannerContents = $(".banner");
+    $parentBody = window.parent.$('body');
+    $parentBanner = window.parent.$('.bannerBox');
+    $bannerContents = $('.banner');
 
-    $popupIframe = $parentBody.find(".popup-iframe");
+    $popupIframe = $parentBody.find('.popup-iframe');
 
-    $("<style>")
+    $('<style>')
       .text(
-        ".welcomer .bannerBox, .titles .bannerBox, .learn .bannerBox, .browse .bannerBox, .index .bannerBox, .search .bannerBox {display:flex}"
+        '.welcomer .bannerBox, .titles .bannerBox, .learn .bannerBox, .browse .bannerBox, .index .bannerBox, .search .bannerBox {display:flex}'
       )
       .appendTo(window.parent.document.head);
 
     if (bannerExists) {
-      var hasAccessToPProfiles = $.cookie("hasAccessToPersonalProfiles");
+      var hasAccessToPProfiles = $.cookie('hasAccessToPersonalProfiles');
 
-      if (hasAccessToPProfiles === "false") {
-        $parentBody.find("#bannerBox").hide();
+      if (hasAccessToPProfiles === 'false') {
+        $parentBody.find('#bannerBox').hide();
       } else {
         // Stow banner in menuBar, no transition.
-        if ($.cookie("bannerHidden" + bannerEdition)) {
-          console.log("Banner exists and is hidden");
+        if ($.cookie('bannerHidden' + bannerEdition)) {
+          console.log('Banner exists and is hidden');
 
           $parentBanner.queue(function () {
             $parentBanner
-              .removeClass("initial")
-              .removeClass("shown")
-              .addClass("hidden");
+              .removeClass('initial')
+              .removeClass('shown')
+              .addClass('hidden');
             $parentBanner.dequeue();
           });
           setTimeout(function () {
-            $parentBanner.css("transition", "all 0.8s");
+            $parentBanner.css('transition', 'all 0.8s');
           }, 2000);
 
           $bannerContents.queue(function () {
             $bannerContents
-              .css("transition", "all 0s")
-              .removeClass("shown")
-              .addClass("hidden");
+              .css('transition', 'all 0s')
+              .removeClass('shown')
+              .addClass('hidden');
             $bannerContents.dequeue();
           });
 
           setTimeout(function () {
-            $bannerContents.css("transition", "all 0.8s");
+            $bannerContents.css('transition', 'all 0.8s');
           }, 2000);
         } else {
           // Slide banner down;
-          $parentBanner.css("transition", "all 0.8s");
+          $parentBanner.css('transition', 'all 0.8s');
           setTimeout(function () {
             // if (window.parent.$("body").hasClass('personalProfile')) {
-            $parentBanner.removeClass("initial");
+            $parentBanner.removeClass('initial');
             // }
           }, 2000);
         }
@@ -99,7 +99,7 @@ $(document).ready(function () {
     }
 
     if (popupExists) {
-      if (!$.cookie("hidePopup")) {
+      if (!$.cookie('hidePopup')) {
         // console.log('SHOW');
         showPopup();
       } else {
@@ -124,23 +124,23 @@ function showHideBanner(elem) {
   var $elem = $(elem);
 
   //style within iframe
-  $elem.closest(".banner").toggleClass("hidden").toggleClass("shown");
+  $elem.closest('.banner').toggleClass('hidden').toggleClass('shown');
 
   // style of iframe container
-  var $bannerBox = window.parent.$("#bannerBox");
-  $bannerBox.find("iframe").css("height", "253px");
-  if ($bannerBox.hasClass("shown")) {
-    $bannerBox.removeClass("shown").addClass("hidden");
+  var $bannerBox = window.parent.$('#bannerBox');
+  $bannerBox.find('iframe').css('height', '253px');
+  if ($bannerBox.hasClass('shown')) {
+    $bannerBox.removeClass('shown').addClass('hidden');
   } else {
-    $bannerBox.removeClass("hidden").addClass("shown");
+    $bannerBox.removeClass('hidden').addClass('shown');
   }
 
   // add or delete bannerHidden cookie
-  if ($elem.hasClass("gotIt-button")) {
-    if ($bannerBox.hasClass("shown")) {
-      $.removeCookie("bannerHidden" + bannerEdition);
+  if ($elem.hasClass('gotIt-button')) {
+    if ($bannerBox.hasClass('shown')) {
+      $.removeCookie('bannerHidden' + bannerEdition);
     } else {
-      $.cookie("bannerHidden" + bannerEdition, "true", {
+      $.cookie('bannerHidden' + bannerEdition, 'true', {
         expires: 90,
       });
     }
@@ -163,15 +163,15 @@ function showHideBanner(elem) {
 function setIframeBodyClassAccordingTo_LoginStatus() {
   // console.log('setIframeBodyClassAccordingToLoginStatus');
 
-  if ($.cookie("atvCookie")) {
-    $("body").addClass("logged-in");
-    $(".announcementBanner.leftRight .button-text").removeClass(
-      "displayIsNone"
+  if ($.cookie('atvCookie')) {
+    $('body').addClass('logged-in');
+    $('.announcementBanner.leftRight .button-text').removeClass(
+      'displayIsNone'
     );
   } else {
-    $("body").addClass("logged-out");
-    $(".announcementBanner.leftRight .button-text").removeClass(
-      "displayIsNone"
+    $('body').addClass('logged-out');
+    $('.announcementBanner.leftRight .button-text').removeClass(
+      'displayIsNone'
     );
   }
 }
@@ -183,42 +183,42 @@ function setIframeBodyClassAccordingTo_ScreenSize() {
     $parentBody.innerHeight() < 600 &&
     $parentBody.innerHeight() < $parentBody.innerWidth()
   ) {
-    $("body").addClass("mobile-landscape");
+    $('body').addClass('mobile-landscape');
   }
 }
 
 function initialiseIframeRotatingBanner() {
   // console.log('initialiseIframeRotatingBanner');
 
-  $bannerBox = $(".bannerInnerBox");
-  $slides = $bannerBox.children(".announcementBanner");
-  $dotContainer = $bannerBox.children(".dotContainer");
-  $playPause = $bannerBox.children(".playPause");
+  $bannerBox = $('.bannerInnerBox');
+  $slides = $bannerBox.children('.announcementBanner');
+  $dotContainer = $bannerBox.children('.dotContainer');
+  $playPause = $bannerBox.children('.playPause');
   numBanners = $slides.length;
 
   if (numBanners > 1) {
     $slides.each(function (i, slide) {
       var $slide = $(slide);
-      $slide.attr("data-order", i);
-      var $newDot = $("<div class='dot'>" + i + "</div>");
-      $newDot.attr("data-order", i);
+      $slide.attr('data-order', i);
+      var $newDot = $("<div class='dot'>" + i + '</div>');
+      $newDot.attr('data-order', i);
       if (i === 0) {
-        $newDot.addClass("active");
+        $newDot.addClass('active');
         $firstSlide = $slide;
       }
-      $newDot.on("click", bannerDotClicked);
+      $newDot.on('click', bannerDotClicked);
       $newDot.appendTo($dotContainer);
     });
     $dots = $dotContainer.children();
-    $dotContainer.removeClass("displayIsNone");
+    $dotContainer.removeClass('displayIsNone');
 
     bannerTimer = setTimeout(showSlides, slideInterval);
     // showSlides();
 
-    $playPause.removeClass("displayIsNone");
-    $playPause.on("click", playPauseClicked);
+    $playPause.removeClass('displayIsNone');
+    $playPause.on('click', playPauseClicked);
   } else {
-    $bannerBox.addClass("singleBanner");
+    $bannerBox.addClass('singleBanner');
   }
 }
 
@@ -226,10 +226,10 @@ function showSlides() {
   // console.log('showSlides');
   animRunning = true;
   animComplete = false;
-  $playPause.removeClass("paused");
-  $slides = $(".announcementBanner");
-  $firstSlide = $(".announcementBanner").first();
-  var nextOrder = $firstSlide.next(".announcementBanner").attr("data-order");
+  $playPause.removeClass('paused');
+  $slides = $('.announcementBanner');
+  $firstSlide = $('.announcementBanner').first();
+  var nextOrder = $firstSlide.next('.announcementBanner').attr('data-order');
   // console.log('nextOrder is ' + nextOrder);
   var $nextDot = $('.dot[data-order="' + nextOrder + '"]');
   // console.log('$nextDot order is ' + $nextDot.attr('data-order'));
@@ -248,7 +248,7 @@ function showSlides() {
       },
       slideSpeed,
       function () {
-        $firstSlide.css("margin-left", "0");
+        $firstSlide.css('margin-left', '0');
         $firstSlide.parent().append($firstSlide);
         animComplete = true;
       }
@@ -260,7 +260,7 @@ function showSlides() {
       },
       slideSpeed,
       function () {
-        $firstSlide.css("margin-top", "0");
+        $firstSlide.css('margin-top', '0');
         $firstSlide.parent().append($firstSlide);
         animComplete = true;
       }
@@ -270,8 +270,8 @@ function showSlides() {
   bannerTimer = setTimeout(showSlides, slideInterval);
 
   dotTimer = setTimeout(function () {
-    $dots.removeClass("active");
-    $nextDot.addClass("active");
+    $dots.removeClass('active');
+    $nextDot.addClass('active');
   }, 1000);
 }
 
@@ -279,27 +279,27 @@ function bannerDotClicked() {
   // console.log('bannerDotClicked');
 
   var $this = $(this);
-  if ($this.hasClass("active") && !animRunning) {
+  if ($this.hasClass('active') && !animRunning) {
     iterations = 0;
     showSlides();
   } else {
     animComplete = true;
     stopAnim();
-    var dotOrder = $this.attr("data-order");
-    $dots.removeClass("active");
-    $this.addClass("active");
+    var dotOrder = $this.attr('data-order');
+    $dots.removeClass('active');
+    $this.addClass('active');
 
     //		console.log(dotOrder);
     var $bannerToShow = $(".announcementBanner[data-order='" + dotOrder + "']");
-    $bannerToShow.css("margin-top", "0");
-    $(".continueBtn").after($bannerToShow);
+    $bannerToShow.css('margin-top', '0');
+    $('.continueBtn').after($bannerToShow);
   }
 }
 
 function playPauseClicked() {
   // console.log('playPauseClicked');
 
-  if ($playPause.hasClass("paused")) {
+  if ($playPause.hasClass('paused')) {
     showSlides();
     iterations = 0;
   } else {
@@ -320,14 +320,14 @@ function stopAnim() {
   // console.log('STOPANIM ' + animComplete);
   var checkSlideComplete = setInterval(function () {
     if (animComplete) {
-      $bannerBox.children(".announcementBanner").each(function () {
-        $(this).css("margin-top", "0");
+      $bannerBox.children('.announcementBanner').each(function () {
+        $(this).css('margin-top', '0');
         $(this).stop(true, true);
       });
       clearTimeout(bannerTimer);
       clearTimeout(dotTimer);
       animRunning = false;
-      $playPause.addClass("paused");
+      $playPause.addClass('paused');
       clearInterval(checkSlideComplete);
       // if ($bannerBox.children('.announcementBanner').length === 1) {
       // 	$('.playPause').hide();
@@ -340,13 +340,13 @@ function stopAnim() {
 function checkForCookiesRelatingToButtons() {
   // console.log('checkForCookiesRelatingToButtons');
 
-  $setCookieButtons = $(".bannerBox").find(".setCookie");
+  $setCookieButtons = $('.bannerBox').find('.setCookie');
   $setCookieButtons.each(function (i, cookieButton) {
     console.log(i);
     var $cookieButton = $(cookieButton);
-    var cookieId = $cookieButton.attr("id");
-    if ($.cookie(cookieId + "Clicked") === "true") {
-      $cookieButton.closest(".announcementBanner").remove();
+    var cookieId = $cookieButton.attr('id');
+    if ($.cookie(cookieId + 'Clicked') === 'true') {
+      $cookieButton.closest('.announcementBanner').remove();
     }
   });
 }
@@ -354,51 +354,51 @@ function checkForCookiesRelatingToButtons() {
 function addOnClickToCookieButtons() {
   // console.log('addOnClickToCookieButtons');
 
-  $setCookieButtons.on("click", function (event) {
+  $setCookieButtons.on('click', function (event) {
     var $thisButton = $(event.currentTarget);
-    var buttonOrder = $thisButton.parent().attr("data-order");
-    var buttonId = $thisButton.attr("id");
-    if (!$thisButton.hasClass("persistant")) {
+    var buttonOrder = $thisButton.parent().attr('data-order');
+    var buttonId = $thisButton.attr('id');
+    if (!$thisButton.hasClass('persistant')) {
       var $buttonParent = $thisButton.parent();
       $buttonParent.remove();
       $dotContainer.children('[data-order = "' + buttonOrder + '"]').remove();
-      var $otherBanners = $bannerBox.children(".announcementBanner");
-      var leadingBannerOrder = $otherBanners.first().attr("data-order");
-      $dotContainer.children().removeClass("active");
+      var $otherBanners = $bannerBox.children('.announcementBanner');
+      var leadingBannerOrder = $otherBanners.first().attr('data-order');
+      $dotContainer.children().removeClass('active');
       $dotContainer
         .children('[data-order = "' + leadingBannerOrder + '"]')
-        .addClass("active");
-      if ($otherBanners.first().hasClass("librarian")) {
-        $playPause.removeClass("dark");
+        .addClass('active');
+      if ($otherBanners.first().hasClass('librarian')) {
+        $playPause.removeClass('dark');
       } else {
-        $playPause.addClass("dark");
+        $playPause.addClass('dark');
       }
       if ($otherBanners.length === 1) {
         stopAnim();
       }
-      $.cookie(buttonId + "Clicked", "true", {
+      $.cookie(buttonId + 'Clicked', 'true', {
         expires: 28,
       });
     }
     var buttonLink = links[buttonId];
-    window.open(buttonLink, "_blank");
+    window.open(buttonLink, '_blank');
   });
 }
 
 var setOrDeletePopupCookie = function (elem) {
-  console.log("setOrDeletePopupCookie");
+  console.log('setOrDeletePopupCookie');
 
   // SET OR DELETE POPUP COOKIE
   var $this = $(elem);
-  $this.toggleClass("clicked");
-  if ($this.hasClass("clicked")) {
-    $.cookie("hidePopup", "true", {
+  $this.toggleClass('clicked');
+  if ($this.hasClass('clicked')) {
+    $.cookie('hidePopup', 'true', {
       expires: 3650,
     });
-    console.log("ADD-COOKIE");
+    console.log('ADD-COOKIE');
   } else {
-    $.removeCookie("hidePopup");
-    console.log("REMOVE-COOKIE");
+    $.removeCookie('hidePopup');
+    console.log('REMOVE-COOKIE');
   }
   console.log($.cookie());
 };
