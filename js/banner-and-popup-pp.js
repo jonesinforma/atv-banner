@@ -1,9 +1,9 @@
 /* jshint browser: true, devel: true */
 /* global $, console, f, g */
 
-var bannerExists = true,
+var bannerExists = false,
   popupExists = false,
-  bannerEdition = '2023-11-22-02';
+  bannerEdition = '2023-11-28-01';
 
 var $setCookieButtons,
   $slides,
